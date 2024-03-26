@@ -1,0 +1,337 @@
+==========
+Args:Namespace(SCT=True, arch='vit_small', batch_size=256, bg_knn=50, data_dir='/home1/wml/dataset/', dataset_name='MSMT17', dropout=0, epochs=50, eval_step=10, features=0, has_aug_transform=False, has_detr=False, has_intra_cam_loss=True, has_mcnl_loss=True, height=256, iters=200, logs_dir='MSMT_logs/', lr=0.00035, mcnl_negK=50, momentum=0.2, num_instances=8, optimizer='SGD', overlap_ratio=0, pool_type='gempool', print_freq=100, seed=1, self_norm=True, split_subcamera=True, step_size=20, temp=0.05, weight_decay=0.0005, width=128, workers=4)
+==========
+==> Load unlabeled dataset
+root path= /home1/wml/dataset/MSMT17
+=> MSMT17 loaded
+Dataset statistics:
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |  1041 |     6694 |        15
+  query    |  3060 |    11659 |        15
+  gallery  |  3060 |    82161 |        15
+  ----------------------------------------
+Using convolution stem
+using drop_out rate is : 0.0
+using attn_drop_out rate is : 0.0
+using drop_path rate is : 0.3
+Load 172 / 177 layers.
+==> Extract feature for all images
+  initializing class memory feature with shape torch.Size([1041, 384])...
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [45, 72, 53, 4, 19, 22, 46, 50, 61, 26, 51, 30, 75, 20, 28, 20, 34, 45, 53, 13, 49, 27, 44, 59, 36, 28, 31]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [0][100/200]	Time 3.564 (3.840)	Data 0.001 (0.060)	Loss 3.046 (2.833)	
+Epoch: [0][200/200]	Time 3.958 (3.852)	Data 0.001 (0.057)	Loss 1.688 (2.503)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [59, 92, 19, 4, 19, 22, 48, 58, 51, 26, 40, 92, 24, 20, 28, 20, 43, 36, 57, 9, 49, 27, 31, 37, 71, 33, 26]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [1][100/200]	Time 3.584 (3.856)	Data 0.000 (0.051)	Loss 1.601 (1.906)	
+Epoch: [1][200/200]	Time 3.723 (3.851)	Data 0.000 (0.060)	Loss 1.530 (1.802)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [6, 109, 55, 4, 19, 22, 59, 50, 48, 26, 27, 107, 22, 20, 28, 20, 47, 32, 53, 13, 49, 27, 79, 30, 30, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [2][100/200]	Time 3.857 (3.841)	Data 0.001 (0.048)	Loss 1.559 (1.622)	
+Epoch: [2][200/200]	Time 3.961 (3.831)	Data 0.000 (0.051)	Loss 1.407 (1.577)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [101, 10, 59, 4, 19, 22, 62, 49, 46, 26, 11, 124, 21, 20, 28, 20, 30, 49, 55, 11, 49, 27, 29, 64, 46, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [3][100/200]	Time 3.879 (3.825)	Data 0.001 (0.062)	Loss 1.296 (1.443)	
+Epoch: [3][200/200]	Time 3.787 (3.828)	Data 0.001 (0.056)	Loss 1.454 (1.428)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [100, 65, 5, 4, 19, 22, 50, 53, 54, 26, 107, 28, 21, 20, 28, 20, 49, 30, 55, 11, 49, 27, 78, 30, 31, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [4][100/200]	Time 4.056 (3.831)	Data 0.000 (0.052)	Loss 1.426 (1.361)	
+Epoch: [4][200/200]	Time 4.099 (3.849)	Data 0.001 (0.059)	Loss 1.627 (1.336)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [64, 101, 5, 4, 19, 22, 45, 62, 50, 26, 44, 22, 90, 20, 28, 20, 30, 49, 52, 14, 49, 27, 71, 30, 38, 27, 32]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [5][100/200]	Time 3.941 (3.839)	Data 0.001 (0.050)	Loss 1.331 (1.267)	
+Epoch: [5][200/200]	Time 4.186 (3.829)	Data 0.000 (0.050)	Loss 1.402 (1.258)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [104, 61, 5, 4, 19, 22, 59, 51, 47, 26, 22, 105, 29, 20, 28, 20, 30, 49, 16, 50, 49, 27, 30, 30, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [6][100/200]	Time 3.943 (3.846)	Data 0.001 (0.067)	Loss 1.238 (1.191)	
+Epoch: [6][200/200]	Time 3.772 (3.855)	Data 0.001 (0.058)	Loss 1.150 (1.187)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [65, 100, 5, 4, 19, 22, 48, 57, 52, 26, 23, 35, 98, 20, 28, 20, 49, 30, 53, 13, 49, 27, 31, 30, 78, 32, 27]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [7][100/200]	Time 3.953 (3.811)	Data 0.000 (0.052)	Loss 1.004 (1.161)	
+Epoch: [7][200/200]	Time 3.612 (3.818)	Data 0.001 (0.059)	Loss 1.186 (1.143)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [5, 64, 101, 4, 19, 22, 59, 51, 47, 26, 11, 123, 22, 20, 28, 20, 48, 31, 38, 28, 49, 27, 56, 28, 55, 32, 27]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [8][100/200]	Time 3.586 (3.805)	Data 0.000 (0.048)	Loss 1.035 (1.128)	
+Epoch: [8][200/200]	Time 3.555 (3.800)	Data 0.000 (0.049)	Loss 1.055 (1.117)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [11, 58, 101, 4, 19, 22, 48, 51, 58, 26, 37, 32, 87, 20, 28, 20, 49, 30, 52, 14, 49, 27, 29, 79, 31, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [9][100/200]	Time 3.706 (3.841)	Data 0.001 (0.065)	Loss 1.159 (1.072)	
+Epoch: [9][200/200]	Time 3.824 (3.840)	Data 0.001 (0.056)	Loss 1.388 (1.064)	
+==> Epoch 9 test: 
+Extract Features: [50/367]	Time 0.578 (0.297)	Data 0.436 (0.132)	
+Extract Features: [100/367]	Time 0.142 (0.275)	Data 0.000 (0.111)	
+Extract Features: [150/367]	Time 0.653 (0.272)	Data 0.497 (0.108)	
+Extract Features: [200/367]	Time 0.142 (0.268)	Data 0.000 (0.105)	
+Extract Features: [250/367]	Time 0.462 (0.269)	Data 0.263 (0.106)	
+Extract Features: [300/367]	Time 0.167 (0.267)	Data 0.000 (0.105)	
+Extract Features: [350/367]	Time 0.140 (0.267)	Data 0.000 (0.104)	
+Mean AP: 33.2%
+CMC Scores:
+  top-1          63.8%
+  top-5          75.7%
+  top-10         80.3%
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [67, 58, 45, 4, 19, 22, 60, 51, 46, 26, 27, 107, 22, 20, 28, 20, 30, 49, 55, 11, 49, 27, 23, 49, 67, 27, 32]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [10][100/200]	Time 3.935 (3.835)	Data 0.000 (0.051)	Loss 1.082 (1.032)	
+Epoch: [10][200/200]	Time 3.641 (3.838)	Data 0.001 (0.061)	Loss 0.921 (1.022)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [36, 69, 65, 4, 19, 22, 48, 59, 50, 26, 37, 99, 20, 20, 28, 20, 28, 51, 38, 28, 49, 27, 48, 38, 53, 27, 32]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [11][100/200]	Time 3.646 (3.821)	Data 0.001 (0.056)	Loss 1.064 (1.013)	
+Epoch: [11][200/200]	Time 3.779 (3.820)	Data 0.000 (0.056)	Loss 0.874 (0.999)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [8, 100, 62, 4, 19, 22, 47, 60, 50, 26, 94, 20, 42, 20, 28, 20, 30, 49, 15, 51, 49, 27, 38, 71, 30, 27, 32]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [12][100/200]	Time 3.689 (3.870)	Data 0.001 (0.070)	Loss 0.996 (0.993)	
+Epoch: [12][200/200]	Time 4.010 (3.838)	Data 0.001 (0.060)	Loss 0.902 (0.987)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [65, 62, 43, 4, 19, 22, 59, 51, 47, 26, 36, 95, 25, 20, 28, 20, 49, 30, 42, 24, 49, 27, 36, 60, 43, 27, 32]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [13][100/200]	Time 3.767 (3.801)	Data 0.000 (0.051)	Loss 0.884 (0.953)	
+Epoch: [13][200/200]	Time 3.522 (3.835)	Data 0.000 (0.061)	Loss 1.107 (0.951)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [51, 60, 59, 4, 19, 22, 50, 55, 52, 26, 98, 38, 20, 20, 28, 20, 48, 31, 52, 14, 49, 27, 34, 66, 39, 28, 31]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [14][100/200]	Time 3.917 (3.829)	Data 0.000 (0.054)	Loss 1.073 (0.942)	
+Epoch: [14][200/200]	Time 3.764 (3.813)	Data 0.000 (0.053)	Loss 0.982 (0.942)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [60, 106, 4, 4, 19, 22, 58, 49, 50, 26, 19, 117, 20, 20, 28, 20, 31, 48, 15, 51, 49, 27, 47, 35, 57, 27, 32]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [15][100/200]	Time 3.961 (3.838)	Data 0.001 (0.067)	Loss 0.839 (0.938)	
+Epoch: [15][200/200]	Time 3.574 (3.846)	Data 0.001 (0.059)	Loss 0.875 (0.925)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [5, 61, 104, 4, 19, 22, 51, 51, 55, 26, 25, 111, 20, 20, 28, 20, 28, 51, 16, 50, 49, 27, 50, 34, 55, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [16][100/200]	Time 3.545 (3.828)	Data 0.000 (0.050)	Loss 1.151 (0.908)	
+Epoch: [16][200/200]	Time 3.985 (3.838)	Data 0.001 (0.059)	Loss 0.897 (0.911)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [6, 61, 103, 4, 19, 22, 50, 51, 56, 26, 39, 30, 87, 20, 28, 20, 48, 31, 11, 55, 49, 27, 39, 32, 68, 24, 35]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [17][100/200]	Time 3.586 (3.799)	Data 0.001 (0.052)	Loss 0.954 (0.892)	
+Epoch: [17][200/200]	Time 3.567 (3.803)	Data 0.000 (0.053)	Loss 0.881 (0.897)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [62, 62, 46, 4, 19, 22, 48, 54, 55, 26, 22, 38, 96, 20, 28, 20, 30, 49, 10, 56, 49, 27, 41, 55, 43, 31, 28]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [18][100/200]	Time 3.756 (3.814)	Data 0.001 (0.065)	Loss 0.894 (0.873)	
+Epoch: [18][200/200]	Time 3.558 (3.828)	Data 0.000 (0.059)	Loss 0.812 (0.867)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [103, 63, 4, 4, 19, 22, 52, 55, 50, 26, 15, 120, 21, 20, 28, 20, 30, 49, 55, 11, 49, 27, 32, 36, 71, 26, 33]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [19][100/200]	Time 3.472 (3.787)	Data 0.000 (0.050)	Loss 0.943 (0.879)	
+Epoch: [19][200/200]	Time 3.620 (3.802)	Data 0.001 (0.059)	Loss 1.013 (0.881)	
+==> Epoch 19 test: 
+Extract Features: [50/367]	Time 0.509 (0.289)	Data 0.356 (0.126)	
+Extract Features: [100/367]	Time 0.150 (0.268)	Data 0.000 (0.106)	
+Extract Features: [150/367]	Time 0.258 (0.264)	Data 0.116 (0.102)	
+Extract Features: [200/367]	Time 0.190 (0.260)	Data 0.000 (0.099)	
+Extract Features: [250/367]	Time 0.406 (0.259)	Data 0.260 (0.098)	
+Extract Features: [300/367]	Time 0.455 (0.257)	Data 0.306 (0.096)	
+Extract Features: [350/367]	Time 0.145 (0.256)	Data 0.000 (0.095)	
+Mean AP: 34.0%
+CMC Scores:
+  top-1          64.2%
+  top-5          76.0%
+  top-10         80.2%
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 48, 62, 47, 26, 47, 89, 20, 20, 28, 20, 33, 46, 42, 24, 49, 27, 31, 47, 61, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [20][100/200]	Time 3.560 (3.814)	Data 0.001 (0.055)	Loss 0.756 (0.841)	
+Epoch: [20][200/200]	Time 3.905 (3.822)	Data 0.000 (0.053)	Loss 0.822 (0.835)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 47, 47, 63, 26, 20, 47, 89, 20, 28, 20, 31, 48, 22, 44, 49, 27, 66, 20, 53, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [21][100/200]	Time 3.537 (3.689)	Data 0.001 (0.067)	Loss 0.846 (0.824)	
+Epoch: [21][200/200]	Time 3.440 (3.605)	Data 0.001 (0.059)	Loss 0.854 (0.825)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 48, 59, 50, 26, 21, 34, 101, 20, 28, 20, 30, 49, 24, 42, 49, 27, 29, 71, 39, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [22][100/200]	Time 3.356 (3.529)	Data 0.000 (0.049)	Loss 0.807 (0.827)	
+Epoch: [22][200/200]	Time 3.454 (3.544)	Data 0.001 (0.061)	Loss 0.905 (0.820)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [7, 60, 103, 4, 19, 22, 48, 59, 50, 26, 21, 39, 96, 20, 28, 20, 49, 30, 51, 15, 49, 27, 39, 30, 70, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [23][100/200]	Time 3.605 (3.512)	Data 0.001 (0.049)	Loss 0.861 (0.817)	
+Epoch: [23][200/200]	Time 3.547 (3.524)	Data 0.000 (0.049)	Loss 0.841 (0.817)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [7, 61, 102, 4, 19, 22, 48, 59, 50, 26, 22, 41, 93, 20, 28, 20, 48, 31, 22, 44, 49, 27, 58, 39, 42, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [24][100/200]	Time 3.373 (3.572)	Data 0.001 (0.067)	Loss 0.798 (0.817)	
+Epoch: [24][200/200]	Time 3.377 (3.551)	Data 0.001 (0.059)	Loss 0.886 (0.814)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [61, 105, 4, 4, 19, 22, 46, 63, 48, 26, 20, 41, 95, 20, 28, 20, 48, 31, 42, 24, 49, 27, 35, 70, 34, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [25][100/200]	Time 3.612 (3.503)	Data 0.000 (0.054)	Loss 0.784 (0.815)	
+Epoch: [25][200/200]	Time 3.456 (3.525)	Data 0.001 (0.061)	Loss 0.924 (0.811)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 57, 50, 50, 26, 21, 41, 94, 20, 28, 20, 49, 30, 51, 15, 49, 27, 62, 32, 45, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [26][100/200]	Time 3.371 (3.507)	Data 0.001 (0.053)	Loss 0.747 (0.810)	
+Epoch: [26][200/200]	Time 3.665 (3.523)	Data 0.000 (0.052)	Loss 0.837 (0.811)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [7, 60, 103, 4, 19, 22, 48, 60, 49, 26, 87, 27, 42, 20, 28, 20, 49, 30, 51, 15, 49, 27, 41, 30, 68, 24, 35]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [27][100/200]	Time 3.410 (3.509)	Data 0.001 (0.064)	Loss 0.905 (0.812)	
+Epoch: [27][200/200]	Time 3.627 (3.521)	Data 0.001 (0.058)	Loss 0.766 (0.810)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [64, 102, 4, 4, 19, 22, 48, 63, 46, 26, 20, 39, 97, 20, 28, 20, 48, 31, 51, 15, 49, 27, 33, 75, 31, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [28][100/200]	Time 3.310 (3.503)	Data 0.000 (0.051)	Loss 0.696 (0.802)	
+Epoch: [28][200/200]	Time 3.495 (3.524)	Data 0.001 (0.059)	Loss 0.787 (0.807)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [8, 60, 102, 4, 19, 22, 61, 46, 50, 26, 46, 20, 90, 20, 28, 20, 49, 30, 11, 55, 49, 27, 41, 41, 57, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [29][100/200]	Time 3.677 (3.529)	Data 0.001 (0.050)	Loss 0.791 (0.809)	
+Epoch: [29][200/200]	Time 3.297 (3.517)	Data 0.000 (0.050)	Loss 0.821 (0.807)	
+==> Epoch 29 test: 
+Extract Features: [50/367]	Time 0.494 (0.266)	Data 0.364 (0.127)	
+Extract Features: [100/367]	Time 0.139 (0.244)	Data 0.000 (0.105)	
+Extract Features: [150/367]	Time 0.507 (0.241)	Data 0.372 (0.101)	
+Extract Features: [200/367]	Time 0.139 (0.237)	Data 0.000 (0.096)	
+Extract Features: [250/367]	Time 0.519 (0.235)	Data 0.373 (0.094)	
+Extract Features: [300/367]	Time 0.133 (0.233)	Data 0.000 (0.092)	
+Extract Features: [350/367]	Time 0.358 (0.232)	Data 0.220 (0.091)	
+Mean AP: 35.2%
+CMC Scores:
+  top-1          65.7%
+  top-5          76.8%
+  top-10         81.5%
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [10, 58, 102, 4, 19, 22, 51, 53, 53, 26, 21, 36, 99, 20, 28, 20, 48, 31, 51, 15, 49, 27, 65, 32, 42, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [30][100/200]	Time 3.239 (3.558)	Data 0.001 (0.073)	Loss 0.762 (0.805)	
+Epoch: [30][200/200]	Time 3.410 (3.529)	Data 0.001 (0.061)	Loss 0.803 (0.805)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 61, 46, 50, 26, 20, 40, 96, 20, 28, 20, 48, 31, 42, 24, 49, 27, 33, 35, 71, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [31][100/200]	Time 3.410 (3.519)	Data 0.000 (0.053)	Loss 0.813 (0.798)	
+Epoch: [31][200/200]	Time 3.454 (3.537)	Data 0.001 (0.061)	Loss 0.864 (0.800)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [5, 63, 102, 4, 19, 22, 45, 61, 51, 26, 20, 41, 95, 20, 28, 20, 30, 49, 51, 15, 49, 27, 32, 78, 29, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [32][100/200]	Time 3.487 (3.517)	Data 0.001 (0.054)	Loss 0.850 (0.801)	
+Epoch: [32][200/200]	Time 3.279 (3.519)	Data 0.000 (0.053)	Loss 0.675 (0.799)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 61, 46, 50, 26, 20, 46, 90, 20, 28, 20, 47, 32, 41, 25, 49, 27, 31, 77, 31, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [33][100/200]	Time 3.602 (3.517)	Data 0.001 (0.066)	Loss 0.782 (0.796)	
+Epoch: [33][200/200]	Time 3.522 (3.519)	Data 0.001 (0.058)	Loss 0.782 (0.793)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 46, 61, 50, 26, 41, 22, 93, 20, 28, 20, 30, 49, 53, 13, 49, 27, 30, 48, 61, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [34][100/200]	Time 3.458 (3.524)	Data 0.000 (0.050)	Loss 0.826 (0.800)	
+Epoch: [34][200/200]	Time 3.321 (3.535)	Data 0.001 (0.058)	Loss 0.718 (0.799)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 62, 49, 46, 26, 84, 52, 20, 20, 28, 20, 49, 30, 52, 14, 49, 27, 62, 32, 45, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [35][100/200]	Time 3.354 (3.530)	Data 0.001 (0.051)	Loss 0.735 (0.791)	
+Epoch: [35][200/200]	Time 3.330 (3.528)	Data 0.000 (0.051)	Loss 0.678 (0.787)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [8, 60, 102, 4, 19, 22, 45, 63, 49, 26, 49, 20, 87, 20, 28, 20, 48, 31, 51, 15, 49, 27, 65, 32, 42, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [36][100/200]	Time 3.436 (3.521)	Data 0.001 (0.069)	Loss 0.797 (0.786)	
+Epoch: [36][200/200]	Time 3.425 (3.520)	Data 0.001 (0.060)	Loss 0.821 (0.788)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [64, 53, 53, 4, 19, 22, 57, 50, 50, 26, 44, 20, 92, 20, 28, 20, 48, 31, 51, 15, 49, 27, 39, 32, 68, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [37][100/200]	Time 3.669 (3.542)	Data 0.000 (0.052)	Loss 0.794 (0.783)	
+Epoch: [37][200/200]	Time 3.541 (3.538)	Data 0.001 (0.058)	Loss 0.788 (0.786)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [64, 53, 53, 4, 19, 22, 53, 49, 55, 26, 20, 37, 99, 20, 28, 20, 48, 31, 41, 25, 49, 27, 34, 66, 39, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [38][100/200]	Time 3.523 (3.496)	Data 0.001 (0.053)	Loss 0.877 (0.787)	
+Epoch: [38][200/200]	Time 3.557 (3.522)	Data 0.000 (0.052)	Loss 0.772 (0.786)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [9, 59, 102, 4, 19, 22, 50, 61, 46, 26, 87, 49, 20, 20, 28, 20, 49, 30, 42, 24, 49, 27, 33, 77, 29, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [39][100/200]	Time 3.478 (3.567)	Data 0.001 (0.068)	Loss 0.708 (0.793)	
+Epoch: [39][200/200]	Time 3.439 (3.544)	Data 0.001 (0.058)	Loss 0.747 (0.791)	
+==> Epoch 39 test: 
+Extract Features: [50/367]	Time 0.287 (0.262)	Data 0.153 (0.123)	
+Extract Features: [100/367]	Time 0.428 (0.247)	Data 0.220 (0.108)	
+Extract Features: [150/367]	Time 0.137 (0.242)	Data 0.000 (0.102)	
+Extract Features: [200/367]	Time 0.502 (0.241)	Data 0.358 (0.101)	
+Extract Features: [250/367]	Time 0.131 (0.242)	Data 0.000 (0.101)	
+Extract Features: [300/367]	Time 0.505 (0.242)	Data 0.369 (0.100)	
+Extract Features: [350/367]	Time 0.140 (0.241)	Data 0.000 (0.099)	
+Mean AP: 35.5%
+CMC Scores:
+  top-1          66.1%
+  top-5          77.3%
+  top-10         81.5%
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [10, 58, 102, 4, 19, 22, 59, 51, 47, 26, 22, 45, 89, 20, 28, 20, 30, 49, 51, 15, 49, 27, 59, 32, 48, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [40][100/200]	Time 3.453 (3.507)	Data 0.000 (0.051)	Loss 0.789 (0.793)	
+Epoch: [40][200/200]	Time 3.433 (3.531)	Data 0.001 (0.060)	Loss 0.779 (0.787)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 52, 55, 4, 19, 22, 56, 50, 51, 26, 20, 37, 99, 20, 28, 20, 30, 49, 51, 15, 49, 27, 39, 67, 33, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [41][100/200]	Time 3.492 (3.536)	Data 0.000 (0.051)	Loss 0.763 (0.793)	
+Epoch: [41][200/200]	Time 3.302 (3.525)	Data 0.000 (0.050)	Loss 0.870 (0.787)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [8, 60, 102, 4, 19, 22, 45, 61, 51, 26, 21, 46, 89, 20, 28, 20, 30, 49, 51, 15, 49, 27, 61, 32, 46, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [42][100/200]	Time 3.515 (3.549)	Data 0.001 (0.065)	Loss 0.786 (0.784)	
+Epoch: [42][200/200]	Time 3.595 (3.529)	Data 0.001 (0.059)	Loss 0.763 (0.786)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 61, 51, 45, 26, 22, 46, 88, 20, 28, 20, 30, 49, 55, 11, 49, 27, 36, 35, 68, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [43][100/200]	Time 3.357 (3.515)	Data 0.000 (0.049)	Loss 0.820 (0.791)	
+Epoch: [43][200/200]	Time 3.485 (3.516)	Data 0.001 (0.060)	Loss 0.809 (0.791)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [62, 104, 4, 4, 19, 22, 45, 61, 51, 26, 21, 47, 88, 20, 28, 20, 32, 47, 43, 23, 49, 27, 34, 32, 73, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [44][100/200]	Time 3.310 (3.495)	Data 0.001 (0.054)	Loss 0.694 (0.777)	
+Epoch: [44][200/200]	Time 3.395 (3.506)	Data 0.000 (0.052)	Loss 0.680 (0.782)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 45, 61, 51, 26, 21, 36, 99, 20, 28, 20, 30, 49, 51, 15, 49, 27, 68, 32, 39, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [45][100/200]	Time 3.500 (3.566)	Data 0.000 (0.065)	Loss 0.779 (0.794)	
+Epoch: [45][200/200]	Time 3.521 (3.563)	Data 0.001 (0.060)	Loss 0.878 (0.792)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 45, 62, 50, 26, 21, 45, 90, 20, 28, 20, 30, 49, 11, 55, 49, 27, 37, 31, 71, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [46][100/200]	Time 3.523 (3.541)	Data 0.000 (0.050)	Loss 0.854 (0.792)	
+Epoch: [46][200/200]	Time 3.405 (3.534)	Data 0.001 (0.059)	Loss 0.816 (0.793)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [63, 103, 4, 4, 19, 22, 45, 59, 53, 26, 20, 47, 89, 20, 28, 20, 48, 31, 12, 54, 49, 27, 35, 33, 71, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [47][100/200]	Time 3.345 (3.520)	Data 0.000 (0.056)	Loss 0.832 (0.784)	
+Epoch: [47][200/200]	Time 3.224 (3.506)	Data 0.000 (0.052)	Loss 0.776 (0.788)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [64, 102, 4, 4, 19, 22, 55, 51, 51, 26, 32, 21, 103, 20, 28, 20, 30, 49, 51, 15, 49, 27, 39, 67, 33, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [48][100/200]	Time 3.308 (3.542)	Data 0.001 (0.068)	Loss 0.748 (0.781)	
+Epoch: [48][200/200]	Time 3.502 (3.531)	Data 0.000 (0.060)	Loss 0.776 (0.783)	
+Loading pretrained model generated sub-cameras:
+  ID number under each sub-camera=  [62, 104, 4, 4, 19, 22, 62, 50, 45, 26, 21, 48, 87, 20, 28, 20, 49, 30, 41, 25, 49, 27, 62, 32, 45, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [49][100/200]	Time 3.520 (3.493)	Data 0.000 (0.051)	Loss 0.818 (0.788)	
+Epoch: [49][200/200]	Time 3.509 (3.505)	Data 0.000 (0.059)	Loss 0.722 (0.788)	
+==> Epoch 49 test: 
+Extract Features: [50/367]	Time 0.150 (0.271)	Data 0.000 (0.131)	
+Extract Features: [100/367]	Time 0.213 (0.254)	Data 0.000 (0.113)	
+Extract Features: [150/367]	Time 0.154 (0.248)	Data 0.000 (0.106)	
+Extract Features: [200/367]	Time 0.142 (0.245)	Data 0.000 (0.101)	
+Extract Features: [250/367]	Time 0.144 (0.243)	Data 0.000 (0.099)	
+Extract Features: [300/367]	Time 0.505 (0.243)	Data 0.367 (0.098)	
+Extract Features: [350/367]	Time 0.136 (0.241)	Data 0.000 (0.096)	
+Mean AP: 35.3%
+CMC Scores:
+  top-1          65.9%
+  top-5          77.3%
+  top-10         81.5%
+Total running time:  10:43:57.006074

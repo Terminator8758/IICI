@@ -1,0 +1,1167 @@
+==========
+Args:Namespace(SCT=True, arch='resnet50_nl', batch_size=64, bg_knn=50, data_dir='/home1/wml/dataset/', dataset_name='MSMT17', dropout=0, epochs=100, eval_step=10, features=0, has_aug_transform=True, has_detr=True, has_intra_cam_loss=True, has_mcnl_loss=True, height=256, iters=400, logs_dir='MSMT_logs/', lr=0.00035, mcnl_negK=50, momentum=0.2, num_instances=4, optimizer='Adam', overlap_ratio=0, pool_type='gempool', print_freq=100, seed=1, split_subcamera=True, step_size=20, temp=0.05, weight_decay=0.0005, width=128, workers=4)
+==========
+==> Load unlabeled dataset
+root path= /home1/wml/dataset/MSMT17
+=> MSMT17 loaded
+Dataset statistics:
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |  1041 |     6694 |        15
+  query    |  3060 |    11659 |        15
+  gallery  |  3060 |    82161 |        15
+  ----------------------------------------
+==> Extract feature for all images
+  initializing class memory feature with shape torch.Size([1041, 2048])...
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [54, 64, 52, 4, 19, 22, 32, 80, 45, 26, 63, 25, 68, 20, 28, 20, 36, 43, 54, 12, 49, 27, 39, 39, 61, 29, 30]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [0][100/400]	Time 3.597 (3.415)	Data 0.000 (0.018)	Loss 90.839 (106.419)	
+Epoch: [0][200/400]	Time 3.473 (3.422)	Data 0.000 (0.019)	Loss 82.794 (103.533)	
+Epoch: [0][300/400]	Time 3.421 (3.417)	Data 0.000 (0.017)	Loss 71.646 (95.027)	
+Epoch: [0][400/400]	Time 3.458 (3.414)	Data 0.000 (0.018)	Loss 81.002 (87.119)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [61, 60, 49, 4, 19, 22, 59, 47, 51, 26, 92, 34, 30, 20, 28, 20, 26, 53, 14, 52, 49, 27, 13, 79, 47, 32, 27]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [1][100/400]	Time 3.632 (3.470)	Data 0.000 (0.015)	Loss 51.605 (55.607)	
+Epoch: [1][200/400]	Time 3.372 (3.454)	Data 0.000 (0.019)	Loss 68.742 (54.461)	
+Epoch: [1][300/400]	Time 3.249 (3.448)	Data 0.000 (0.016)	Loss 49.670 (52.353)	
+Epoch: [1][400/400]	Time 3.464 (3.462)	Data 0.000 (0.018)	Loss 47.138 (50.620)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [44, 64, 62, 4, 19, 22, 58, 51, 48, 26, 65, 58, 33, 20, 28, 20, 28, 51, 30, 36, 49, 27, 15, 81, 43, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [2][100/400]	Time 3.345 (3.452)	Data 0.000 (0.017)	Loss 45.262 (43.964)	
+Epoch: [2][200/400]	Time 3.336 (3.467)	Data 0.000 (0.019)	Loss 48.712 (43.324)	
+Epoch: [2][300/400]	Time 3.327 (3.484)	Data 0.000 (0.016)	Loss 33.891 (42.477)	
+Epoch: [2][400/400]	Time 3.501 (3.487)	Data 0.000 (0.018)	Loss 36.625 (41.664)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 59, 55, 4, 19, 22, 50, 56, 51, 26, 65, 58, 33, 20, 28, 20, 22, 57, 25, 41, 49, 27, 15, 84, 40, 32, 27]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [3][100/400]	Time 3.273 (3.492)	Data 0.000 (0.017)	Loss 35.875 (36.651)	
+Epoch: [3][200/400]	Time 3.191 (3.499)	Data 0.000 (0.019)	Loss 38.092 (36.597)	
+Epoch: [3][300/400]	Time 3.476 (3.488)	Data 0.000 (0.017)	Loss 28.096 (36.391)	
+Epoch: [3][400/400]	Time 3.672 (3.492)	Data 0.000 (0.019)	Loss 34.274 (35.583)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 63, 51, 4, 19, 22, 57, 49, 51, 26, 35, 70, 51, 20, 28, 20, 28, 51, 53, 13, 49, 27, 22, 67, 50, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [4][100/400]	Time 3.414 (3.507)	Data 0.000 (0.018)	Loss 39.728 (32.890)	
+Epoch: [4][200/400]	Time 3.820 (3.491)	Data 0.000 (0.019)	Loss 33.094 (32.498)	
+Epoch: [4][300/400]	Time 3.439 (3.485)	Data 0.000 (0.017)	Loss 28.440 (32.013)	
+Epoch: [4][400/400]	Time 3.204 (3.480)	Data 0.000 (0.018)	Loss 39.638 (31.661)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [45, 65, 60, 4, 19, 22, 57, 49, 51, 26, 77, 34, 45, 20, 28, 20, 24, 55, 54, 12, 49, 27, 41, 20, 78, 33, 26]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [5][100/400]	Time 3.362 (3.468)	Data 0.000 (0.016)	Loss 38.741 (29.117)	
+Epoch: [5][200/400]	Time 3.371 (3.475)	Data 0.000 (0.020)	Loss 29.493 (29.210)	
+Epoch: [5][300/400]	Time 3.325 (3.488)	Data 0.000 (0.018)	Loss 26.640 (29.092)	
+Epoch: [5][400/400]	Time 3.357 (3.490)	Data 0.000 (0.019)	Loss 28.629 (28.639)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [53, 63, 54, 4, 19, 22, 56, 49, 52, 26, 60, 32, 64, 20, 28, 20, 32, 47, 16, 50, 49, 27, 85, 25, 29, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [6][100/400]	Time 3.176 (3.500)	Data 0.000 (0.018)	Loss 26.310 (26.965)	
+Epoch: [6][200/400]	Time 3.963 (3.488)	Data 0.000 (0.021)	Loss 22.148 (27.202)	
+Epoch: [6][300/400]	Time 3.440 (3.463)	Data 0.000 (0.017)	Loss 24.165 (27.020)	
+Epoch: [6][400/400]	Time 3.155 (3.456)	Data 0.000 (0.018)	Loss 25.980 (26.682)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [46, 65, 59, 4, 19, 22, 58, 51, 48, 26, 41, 85, 30, 20, 28, 20, 50, 29, 14, 52, 35, 41, 22, 80, 37, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [7][100/400]	Time 3.456 (3.432)	Data 0.000 (0.017)	Loss 28.668 (25.955)	
+Epoch: [7][200/400]	Time 3.299 (3.438)	Data 0.000 (0.019)	Loss 28.614 (25.775)	
+Epoch: [7][300/400]	Time 3.368 (3.430)	Data 0.000 (0.016)	Loss 19.949 (25.605)	
+Epoch: [7][400/400]	Time 3.233 (3.431)	Data 0.000 (0.017)	Loss 19.452 (25.313)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [64, 56, 50, 4, 19, 22, 49, 54, 54, 26, 62, 60, 34, 20, 28, 20, 50, 29, 18, 48, 49, 27, 28, 35, 76, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [8][100/400]	Time 3.205 (3.427)	Data 0.000 (0.016)	Loss 29.251 (23.687)	
+Epoch: [8][200/400]	Time 3.476 (3.445)	Data 0.000 (0.019)	Loss 22.223 (23.764)	
+Epoch: [8][300/400]	Time 3.035 (3.436)	Data 0.000 (0.016)	Loss 22.084 (23.589)	
+Epoch: [8][400/400]	Time 3.449 (3.429)	Data 0.000 (0.017)	Loss 15.797 (23.279)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 64, 47, 4, 19, 22, 56, 49, 52, 26, 36, 34, 86, 20, 28, 20, 50, 29, 28, 38, 49, 27, 79, 23, 37, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [9][100/400]	Time 3.085 (3.447)	Data 0.000 (0.018)	Loss 31.438 (22.587)	
+Epoch: [9][200/400]	Time 3.585 (3.416)	Data 0.000 (0.019)	Loss 25.837 (22.345)	
+Epoch: [9][300/400]	Time 3.839 (3.411)	Data 0.000 (0.017)	Loss 27.245 (22.228)	
+Epoch: [9][400/400]	Time 3.333 (3.425)	Data 0.000 (0.018)	Loss 17.441 (22.077)	
+==> Epoch 9 test: 
+Extract Features: [50/1466]	Time 0.065 (0.299)	Data 0.000 (0.224)	
+Extract Features: [100/1466]	Time 0.080 (0.287)	Data 0.000 (0.212)	
+Extract Features: [150/1466]	Time 0.783 (0.291)	Data 0.687 (0.216)	
+Extract Features: [200/1466]	Time 0.066 (0.284)	Data 0.000 (0.208)	
+Extract Features: [250/1466]	Time 0.067 (0.283)	Data 0.000 (0.208)	
+Extract Features: [300/1466]	Time 0.782 (0.285)	Data 0.653 (0.210)	
+Extract Features: [350/1466]	Time 0.717 (0.283)	Data 0.645 (0.208)	
+Extract Features: [400/1466]	Time 0.245 (0.283)	Data 0.171 (0.208)	
+Extract Features: [450/1466]	Time 0.420 (0.281)	Data 0.339 (0.206)	
+Extract Features: [500/1466]	Time 0.069 (0.280)	Data 0.000 (0.205)	
+Extract Features: [550/1466]	Time 0.903 (0.281)	Data 0.822 (0.206)	
+Extract Features: [600/1466]	Time 0.068 (0.279)	Data 0.000 (0.204)	
+Extract Features: [650/1466]	Time 0.066 (0.279)	Data 0.000 (0.204)	
+Extract Features: [700/1466]	Time 0.066 (0.280)	Data 0.000 (0.205)	
+Extract Features: [750/1466]	Time 0.385 (0.280)	Data 0.316 (0.205)	
+Extract Features: [800/1466]	Time 0.067 (0.279)	Data 0.000 (0.204)	
+Extract Features: [850/1466]	Time 0.808 (0.280)	Data 0.735 (0.205)	
+Extract Features: [900/1466]	Time 0.155 (0.280)	Data 0.000 (0.204)	
+Extract Features: [950/1466]	Time 0.213 (0.280)	Data 0.135 (0.205)	
+Extract Features: [1000/1466]	Time 0.068 (0.280)	Data 0.000 (0.205)	
+Extract Features: [1050/1466]	Time 0.864 (0.279)	Data 0.784 (0.204)	
+Extract Features: [1100/1466]	Time 0.872 (0.280)	Data 0.803 (0.205)	
+Extract Features: [1150/1466]	Time 0.088 (0.279)	Data 0.018 (0.204)	
+Extract Features: [1200/1466]	Time 0.517 (0.278)	Data 0.445 (0.203)	
+Extract Features: [1250/1466]	Time 0.432 (0.280)	Data 0.360 (0.205)	
+Extract Features: [1300/1466]	Time 0.068 (0.279)	Data 0.000 (0.204)	
+Extract Features: [1350/1466]	Time 0.139 (0.278)	Data 0.061 (0.203)	
+Extract Features: [1400/1466]	Time 0.864 (0.279)	Data 0.791 (0.204)	
+Extract Features: [1450/1466]	Time 0.294 (0.279)	Data 0.068 (0.204)	
+Mean AP: 21.5%
+CMC Scores:
+  top-1          51.8%
+  top-5          65.0%
+  top-10         70.1%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [49, 64, 57, 4, 19, 22, 46, 60, 51, 26, 61, 25, 70, 20, 28, 20, 50, 29, 28, 38, 49, 27, 54, 20, 65, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [10][100/400]	Time 3.448 (3.409)	Data 0.000 (0.018)	Loss 30.772 (20.990)	
+Epoch: [10][200/400]	Time 3.478 (3.414)	Data 0.000 (0.021)	Loss 22.872 (21.410)	
+Epoch: [10][300/400]	Time 3.192 (3.414)	Data 0.000 (0.018)	Loss 30.189 (21.571)	
+Epoch: [10][400/400]	Time 3.280 (3.424)	Data 0.000 (0.020)	Loss 23.651 (21.597)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [61, 47, 62, 4, 19, 22, 61, 50, 46, 26, 83, 48, 25, 20, 28, 20, 49, 30, 16, 50, 49, 27, 25, 35, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [11][100/400]	Time 3.733 (3.425)	Data 0.000 (0.019)	Loss 25.459 (20.339)	
+Epoch: [11][200/400]	Time 3.216 (3.411)	Data 0.000 (0.020)	Loss 22.015 (20.391)	
+Epoch: [11][300/400]	Time 3.748 (3.413)	Data 0.000 (0.018)	Loss 18.606 (20.415)	
+Epoch: [11][400/400]	Time 3.223 (3.405)	Data 0.000 (0.020)	Loss 21.170 (20.299)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [49, 66, 55, 4, 19, 22, 49, 51, 57, 26, 33, 91, 32, 20, 28, 20, 22, 57, 28, 38, 49, 27, 25, 35, 79, 26, 33]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [12][100/400]	Time 3.436 (3.391)	Data 0.000 (0.017)	Loss 22.041 (19.533)	
+Epoch: [12][200/400]	Time 3.782 (3.400)	Data 0.000 (0.022)	Loss 16.719 (19.611)	
+Epoch: [12][300/400]	Time 3.695 (3.394)	Data 0.000 (0.019)	Loss 26.091 (19.576)	
+Epoch: [12][400/400]	Time 3.329 (3.403)	Data 0.000 (0.020)	Loss 23.832 (19.542)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 53, 51, 4, 19, 22, 55, 51, 51, 26, 67, 58, 31, 20, 28, 20, 45, 34, 16, 50, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [13][100/400]	Time 3.558 (3.473)	Data 0.000 (0.018)	Loss 19.976 (19.499)	
+Epoch: [13][200/400]	Time 3.287 (3.473)	Data 0.000 (0.019)	Loss 13.544 (19.456)	
+Epoch: [13][300/400]	Time 3.333 (3.452)	Data 0.000 (0.018)	Loss 21.982 (19.386)	
+Epoch: [13][400/400]	Time 3.424 (3.464)	Data 0.000 (0.019)	Loss 14.137 (19.122)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [61, 65, 44, 4, 19, 22, 50, 59, 48, 26, 39, 34, 83, 20, 28, 20, 49, 30, 26, 40, 49, 27, 79, 25, 35, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [14][100/400]	Time 3.249 (3.406)	Data 0.000 (0.017)	Loss 19.419 (18.128)	
+Epoch: [14][200/400]	Time 3.380 (3.422)	Data 0.001 (0.020)	Loss 15.277 (18.224)	
+Epoch: [14][300/400]	Time 3.389 (3.402)	Data 0.000 (0.018)	Loss 20.345 (18.251)	
+Epoch: [14][400/400]	Time 3.632 (3.409)	Data 0.000 (0.020)	Loss 14.089 (18.267)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 64, 48, 4, 19, 22, 51, 55, 51, 26, 67, 31, 58, 20, 28, 20, 26, 53, 26, 40, 49, 27, 24, 36, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [15][100/400]	Time 3.453 (3.483)	Data 0.000 (0.017)	Loss 17.664 (17.843)	
+Epoch: [15][200/400]	Time 3.398 (3.485)	Data 0.000 (0.021)	Loss 15.743 (17.944)	
+Epoch: [15][300/400]	Time 3.299 (3.458)	Data 0.000 (0.019)	Loss 16.500 (17.977)	
+Epoch: [15][400/400]	Time 3.402 (3.446)	Data 0.000 (0.021)	Loss 16.159 (17.949)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [65, 47, 58, 4, 19, 22, 61, 52, 44, 26, 33, 94, 29, 20, 28, 20, 49, 30, 50, 16, 49, 27, 18, 69, 52, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [16][100/400]	Time 3.334 (3.410)	Data 0.000 (0.018)	Loss 17.888 (18.069)	
+Epoch: [16][200/400]	Time 3.802 (3.406)	Data 0.000 (0.020)	Loss 17.999 (17.764)	
+Epoch: [16][300/400]	Time 3.368 (3.401)	Data 0.000 (0.018)	Loss 19.441 (17.503)	
+Epoch: [16][400/400]	Time 3.719 (3.415)	Data 0.000 (0.019)	Loss 19.749 (17.277)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [19, 62, 89, 4, 19, 22, 47, 61, 49, 26, 62, 63, 31, 20, 28, 20, 29, 50, 16, 50, 49, 27, 38, 79, 22, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [17][100/400]	Time 3.397 (3.436)	Data 0.000 (0.019)	Loss 14.693 (17.006)	
+Epoch: [17][200/400]	Time 3.390 (3.433)	Data 0.000 (0.021)	Loss 17.285 (16.826)	
+Epoch: [17][300/400]	Time 3.023 (3.430)	Data 0.000 (0.019)	Loss 18.183 (16.562)	
+Epoch: [17][400/400]	Time 3.679 (3.422)	Data 0.000 (0.021)	Loss 13.775 (16.534)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 51, 61, 4, 19, 22, 54, 51, 52, 26, 61, 35, 60, 20, 28, 20, 50, 29, 15, 51, 49, 27, 88, 20, 31, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [18][100/400]	Time 3.370 (3.427)	Data 0.000 (0.018)	Loss 14.051 (16.650)	
+Epoch: [18][200/400]	Time 3.259 (3.421)	Data 0.000 (0.021)	Loss 15.680 (16.264)	
+Epoch: [18][300/400]	Time 3.240 (3.424)	Data 0.000 (0.017)	Loss 16.597 (16.123)	
+Epoch: [18][400/400]	Time 3.341 (3.434)	Data 0.000 (0.019)	Loss 14.679 (16.089)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [64, 45, 61, 4, 19, 22, 56, 50, 51, 26, 59, 62, 35, 20, 28, 20, 22, 57, 21, 45, 49, 27, 19, 71, 49, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [19][100/400]	Time 3.723 (3.432)	Data 0.000 (0.017)	Loss 20.665 (15.846)	
+Epoch: [19][200/400]	Time 3.259 (3.423)	Data 0.000 (0.021)	Loss 14.378 (15.965)	
+Epoch: [19][300/400]	Time 3.839 (3.433)	Data 0.000 (0.018)	Loss 21.030 (15.899)	
+Epoch: [19][400/400]	Time 3.658 (3.428)	Data 0.000 (0.019)	Loss 16.981 (15.828)	
+==> Epoch 19 test: 
+Extract Features: [50/1466]	Time 0.941 (0.345)	Data 0.859 (0.270)	
+Extract Features: [100/1466]	Time 0.081 (0.311)	Data 0.000 (0.236)	
+Extract Features: [150/1466]	Time 0.862 (0.296)	Data 0.789 (0.221)	
+Extract Features: [200/1466]	Time 0.069 (0.286)	Data 0.000 (0.211)	
+Extract Features: [250/1466]	Time 0.975 (0.283)	Data 0.899 (0.208)	
+Extract Features: [300/1466]	Time 0.066 (0.278)	Data 0.000 (0.203)	
+Extract Features: [350/1466]	Time 0.067 (0.276)	Data 0.000 (0.201)	
+Extract Features: [400/1466]	Time 0.081 (0.275)	Data 0.000 (0.200)	
+Extract Features: [450/1466]	Time 0.083 (0.273)	Data 0.000 (0.199)	
+Extract Features: [500/1466]	Time 0.069 (0.273)	Data 0.000 (0.198)	
+Extract Features: [550/1466]	Time 0.865 (0.272)	Data 0.792 (0.197)	
+Extract Features: [600/1466]	Time 0.074 (0.271)	Data 0.000 (0.197)	
+Extract Features: [650/1466]	Time 0.660 (0.271)	Data 0.580 (0.196)	
+Extract Features: [700/1466]	Time 0.069 (0.270)	Data 0.000 (0.195)	
+Extract Features: [750/1466]	Time 0.976 (0.271)	Data 0.900 (0.196)	
+Extract Features: [800/1466]	Time 0.068 (0.270)	Data 0.000 (0.195)	
+Extract Features: [850/1466]	Time 0.853 (0.269)	Data 0.759 (0.195)	
+Extract Features: [900/1466]	Time 0.067 (0.269)	Data 0.000 (0.195)	
+Extract Features: [950/1466]	Time 0.910 (0.269)	Data 0.831 (0.195)	
+Extract Features: [1000/1466]	Time 0.072 (0.269)	Data 0.000 (0.194)	
+Extract Features: [1050/1466]	Time 0.804 (0.269)	Data 0.729 (0.194)	
+Extract Features: [1100/1466]	Time 0.070 (0.268)	Data 0.000 (0.194)	
+Extract Features: [1150/1466]	Time 0.593 (0.268)	Data 0.523 (0.194)	
+Extract Features: [1200/1466]	Time 0.072 (0.268)	Data 0.000 (0.193)	
+Extract Features: [1250/1466]	Time 0.747 (0.268)	Data 0.665 (0.193)	
+Extract Features: [1300/1466]	Time 0.339 (0.267)	Data 0.266 (0.193)	
+Extract Features: [1350/1466]	Time 0.733 (0.267)	Data 0.655 (0.193)	
+Extract Features: [1400/1466]	Time 0.068 (0.267)	Data 0.000 (0.192)	
+Extract Features: [1450/1466]	Time 0.794 (0.267)	Data 0.708 (0.193)	
+Mean AP: 19.7%
+CMC Scores:
+  top-1          49.1%
+  top-5          62.0%
+  top-10         67.7%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [24, 60, 86, 4, 19, 22, 59, 52, 46, 26, 34, 92, 30, 20, 28, 20, 50, 29, 54, 12, 49, 27, 22, 37, 80, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [20][100/400]	Time 3.515 (3.430)	Data 0.000 (0.016)	Loss 20.481 (15.377)	
+Epoch: [20][200/400]	Time 3.167 (3.424)	Data 0.000 (0.019)	Loss 12.993 (14.538)	
+Epoch: [20][300/400]	Time 3.087 (3.414)	Data 0.000 (0.017)	Loss 11.377 (14.112)	
+Epoch: [20][400/400]	Time 3.787 (3.423)	Data 0.000 (0.018)	Loss 12.636 (13.856)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [88, 62, 20, 4, 19, 22, 45, 64, 48, 26, 33, 34, 89, 20, 28, 20, 49, 30, 53, 13, 49, 27, 38, 77, 24, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [21][100/400]	Time 3.304 (3.460)	Data 0.000 (0.018)	Loss 12.051 (12.796)	
+Epoch: [21][200/400]	Time 3.259 (3.418)	Data 0.000 (0.021)	Loss 14.286 (12.758)	
+Epoch: [21][300/400]	Time 3.151 (3.415)	Data 0.000 (0.018)	Loss 14.372 (12.697)	
+Epoch: [21][400/400]	Time 3.294 (3.411)	Data 0.000 (0.019)	Loss 10.394 (12.645)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [47, 58, 65, 4, 19, 22, 66, 47, 44, 26, 35, 33, 88, 20, 28, 20, 49, 30, 14, 52, 49, 27, 79, 18, 42, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [22][100/400]	Time 3.165 (3.423)	Data 0.000 (0.016)	Loss 10.990 (12.173)	
+Epoch: [22][200/400]	Time 3.532 (3.407)	Data 0.000 (0.020)	Loss 11.837 (12.225)	
+Epoch: [22][300/400]	Time 3.305 (3.417)	Data 0.000 (0.017)	Loss 12.352 (12.207)	
+Epoch: [22][400/400]	Time 3.468 (3.413)	Data 0.000 (0.019)	Loss 12.796 (12.084)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [48, 58, 64, 4, 19, 22, 64, 47, 46, 26, 31, 35, 90, 20, 28, 20, 50, 29, 29, 37, 49, 27, 37, 23, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [23][100/400]	Time 3.685 (3.422)	Data 0.000 (0.017)	Loss 13.903 (11.776)	
+Epoch: [23][200/400]	Time 3.305 (3.425)	Data 0.000 (0.020)	Loss 11.725 (11.794)	
+Epoch: [23][300/400]	Time 3.421 (3.419)	Data 0.000 (0.017)	Loss 11.562 (11.747)	
+Epoch: [23][400/400]	Time 3.162 (3.417)	Data 0.000 (0.018)	Loss 11.794 (11.725)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 50, 61, 4, 19, 22, 67, 46, 44, 26, 65, 58, 33, 20, 28, 20, 50, 29, 48, 18, 49, 27, 37, 23, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [24][100/400]	Time 3.267 (3.411)	Data 0.000 (0.018)	Loss 12.891 (11.878)	
+Epoch: [24][200/400]	Time 3.223 (3.392)	Data 0.000 (0.021)	Loss 11.683 (11.788)	
+Epoch: [24][300/400]	Time 3.629 (3.394)	Data 0.000 (0.019)	Loss 10.440 (11.755)	
+Epoch: [24][400/400]	Time 3.043 (3.414)	Data 0.000 (0.020)	Loss 11.038 (11.670)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 50, 62, 4, 19, 22, 47, 65, 45, 26, 33, 92, 31, 20, 28, 20, 30, 49, 52, 14, 49, 27, 79, 40, 20, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [25][100/400]	Time 3.364 (3.399)	Data 0.000 (0.016)	Loss 10.803 (11.398)	
+Epoch: [25][200/400]	Time 3.060 (3.421)	Data 0.000 (0.020)	Loss 9.755 (11.548)	
+Epoch: [25][300/400]	Time 3.273 (3.430)	Data 0.000 (0.017)	Loss 11.828 (11.588)	
+Epoch: [25][400/400]	Time 3.374 (3.438)	Data 0.000 (0.019)	Loss 13.607 (11.486)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [21, 63, 86, 4, 19, 22, 46, 52, 59, 26, 33, 30, 93, 20, 28, 20, 30, 49, 49, 17, 49, 27, 26, 35, 78, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [26][100/400]	Time 3.741 (3.437)	Data 0.000 (0.019)	Loss 11.765 (11.333)	
+Epoch: [26][200/400]	Time 3.352 (3.428)	Data 0.000 (0.021)	Loss 11.723 (11.391)	
+Epoch: [26][300/400]	Time 3.851 (3.423)	Data 0.000 (0.018)	Loss 9.391 (11.292)	
+Epoch: [26][400/400]	Time 3.025 (3.423)	Data 0.000 (0.019)	Loss 9.858 (11.208)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [65, 47, 58, 4, 19, 22, 47, 51, 59, 26, 37, 33, 86, 20, 28, 20, 49, 30, 14, 52, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [27][100/400]	Time 3.479 (3.421)	Data 0.000 (0.018)	Loss 10.425 (11.146)	
+Epoch: [27][200/400]	Time 3.216 (3.406)	Data 0.000 (0.020)	Loss 10.241 (11.178)	
+Epoch: [27][300/400]	Time 3.089 (3.416)	Data 0.000 (0.017)	Loss 12.888 (11.127)	
+Epoch: [27][400/400]	Time 3.312 (3.417)	Data 0.000 (0.018)	Loss 11.372 (11.088)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [25, 56, 89, 4, 19, 22, 46, 63, 48, 26, 70, 33, 53, 20, 28, 20, 49, 30, 54, 12, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [28][100/400]	Time 3.168 (3.391)	Data 0.000 (0.018)	Loss 11.905 (11.026)	
+Epoch: [28][200/400]	Time 3.015 (3.412)	Data 0.000 (0.021)	Loss 12.004 (11.006)	
+Epoch: [28][300/400]	Time 3.168 (3.404)	Data 0.000 (0.018)	Loss 11.684 (11.020)	
+Epoch: [28][400/400]	Time 3.202 (3.405)	Data 0.000 (0.020)	Loss 8.879 (11.028)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 66, 48, 4, 19, 22, 51, 60, 46, 26, 34, 90, 32, 20, 28, 20, 30, 49, 16, 50, 49, 27, 24, 36, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [29][100/400]	Time 3.228 (3.472)	Data 0.000 (0.017)	Loss 10.551 (10.853)	
+Epoch: [29][200/400]	Time 3.326 (3.457)	Data 0.000 (0.021)	Loss 11.362 (10.911)	
+Epoch: [29][300/400]	Time 3.298 (3.447)	Data 0.000 (0.018)	Loss 12.638 (10.856)	
+Epoch: [29][400/400]	Time 3.297 (3.449)	Data 0.000 (0.019)	Loss 8.488 (10.818)	
+==> Epoch 29 test: 
+Extract Features: [50/1466]	Time 0.070 (0.335)	Data 0.000 (0.258)	
+Extract Features: [100/1466]	Time 0.068 (0.300)	Data 0.000 (0.225)	
+Extract Features: [150/1466]	Time 0.078 (0.287)	Data 0.000 (0.212)	
+Extract Features: [200/1466]	Time 0.068 (0.283)	Data 0.000 (0.207)	
+Extract Features: [250/1466]	Time 0.066 (0.277)	Data 0.000 (0.202)	
+Extract Features: [300/1466]	Time 0.074 (0.277)	Data 0.000 (0.202)	
+Extract Features: [350/1466]	Time 0.517 (0.275)	Data 0.448 (0.200)	
+Extract Features: [400/1466]	Time 0.082 (0.273)	Data 0.000 (0.198)	
+Extract Features: [450/1466]	Time 0.734 (0.273)	Data 0.665 (0.198)	
+Extract Features: [500/1466]	Time 0.065 (0.273)	Data 0.000 (0.198)	
+Extract Features: [550/1466]	Time 1.024 (0.272)	Data 0.938 (0.197)	
+Extract Features: [600/1466]	Time 0.067 (0.271)	Data 0.000 (0.195)	
+Extract Features: [650/1466]	Time 1.045 (0.271)	Data 0.974 (0.196)	
+Extract Features: [700/1466]	Time 0.067 (0.269)	Data 0.000 (0.194)	
+Extract Features: [750/1466]	Time 0.970 (0.271)	Data 0.897 (0.196)	
+Extract Features: [800/1466]	Time 0.067 (0.270)	Data 0.000 (0.195)	
+Extract Features: [850/1466]	Time 0.621 (0.269)	Data 0.552 (0.194)	
+Extract Features: [900/1466]	Time 0.068 (0.268)	Data 0.000 (0.193)	
+Extract Features: [950/1466]	Time 0.076 (0.268)	Data 0.000 (0.193)	
+Extract Features: [1000/1466]	Time 0.076 (0.268)	Data 0.000 (0.193)	
+Extract Features: [1050/1466]	Time 0.196 (0.267)	Data 0.124 (0.192)	
+Extract Features: [1100/1466]	Time 0.384 (0.267)	Data 0.315 (0.192)	
+Extract Features: [1150/1466]	Time 0.069 (0.267)	Data 0.000 (0.192)	
+Extract Features: [1200/1466]	Time 0.872 (0.267)	Data 0.803 (0.192)	
+Extract Features: [1250/1466]	Time 0.069 (0.267)	Data 0.000 (0.192)	
+Extract Features: [1300/1466]	Time 0.839 (0.267)	Data 0.766 (0.192)	
+Extract Features: [1350/1466]	Time 0.067 (0.266)	Data 0.000 (0.192)	
+Extract Features: [1400/1466]	Time 0.947 (0.267)	Data 0.873 (0.192)	
+Extract Features: [1450/1466]	Time 0.067 (0.266)	Data 0.000 (0.191)	
+Mean AP: 24.3%
+CMC Scores:
+  top-1          56.8%
+  top-5          69.1%
+  top-10         73.8%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [57, 66, 47, 4, 19, 22, 65, 47, 45, 26, 32, 102, 22, 20, 28, 20, 49, 30, 15, 51, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [30][100/400]	Time 3.369 (3.453)	Data 0.000 (0.019)	Loss 11.002 (10.621)	
+Epoch: [30][200/400]	Time 3.854 (3.443)	Data 0.000 (0.021)	Loss 11.629 (10.612)	
+Epoch: [30][300/400]	Time 3.230 (3.425)	Data 0.000 (0.018)	Loss 12.400 (10.644)	
+Epoch: [30][400/400]	Time 3.271 (3.425)	Data 0.000 (0.019)	Loss 12.596 (10.681)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 50, 62, 4, 19, 22, 47, 64, 46, 26, 67, 56, 33, 20, 28, 20, 49, 30, 16, 50, 49, 27, 79, 21, 39, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [31][100/400]	Time 3.483 (3.472)	Data 0.000 (0.018)	Loss 9.960 (10.451)	
+Epoch: [31][200/400]	Time 3.287 (3.436)	Data 0.000 (0.022)	Loss 9.962 (10.533)	
+Epoch: [31][300/400]	Time 3.156 (3.430)	Data 0.000 (0.018)	Loss 10.156 (10.596)	
+Epoch: [31][400/400]	Time 3.232 (3.435)	Data 0.000 (0.020)	Loss 8.520 (10.599)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 52, 52, 4, 19, 22, 53, 58, 46, 26, 33, 28, 95, 20, 28, 20, 30, 49, 13, 53, 49, 27, 18, 80, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [32][100/400]	Time 3.295 (3.470)	Data 0.000 (0.019)	Loss 9.520 (10.460)	
+Epoch: [32][200/400]	Time 3.508 (3.440)	Data 0.000 (0.022)	Loss 9.268 (10.558)	
+Epoch: [32][300/400]	Time 3.042 (3.444)	Data 0.000 (0.018)	Loss 9.554 (10.515)	
+Epoch: [32][400/400]	Time 3.475 (3.430)	Data 0.000 (0.019)	Loss 10.904 (10.471)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 53, 51, 4, 19, 22, 64, 48, 45, 26, 31, 33, 92, 20, 28, 20, 49, 30, 14, 52, 49, 27, 79, 23, 37, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [33][100/400]	Time 3.651 (3.473)	Data 0.000 (0.016)	Loss 11.195 (10.278)	
+Epoch: [33][200/400]	Time 3.895 (3.442)	Data 0.000 (0.019)	Loss 12.223 (10.266)	
+Epoch: [33][300/400]	Time 3.164 (3.409)	Data 0.000 (0.016)	Loss 10.830 (10.228)	
+Epoch: [33][400/400]	Time 3.595 (3.420)	Data 0.000 (0.019)	Loss 13.718 (10.268)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 52, 52, 4, 19, 22, 46, 48, 63, 26, 33, 93, 30, 20, 28, 20, 49, 30, 50, 16, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [34][100/400]	Time 3.398 (3.445)	Data 0.000 (0.017)	Loss 9.555 (10.188)	
+Epoch: [34][200/400]	Time 3.724 (3.444)	Data 0.000 (0.020)	Loss 8.779 (10.196)	
+Epoch: [34][300/400]	Time 3.244 (3.431)	Data 0.000 (0.018)	Loss 12.110 (10.261)	
+Epoch: [34][400/400]	Time 3.325 (3.437)	Data 0.000 (0.019)	Loss 9.058 (10.321)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 51, 57, 4, 19, 22, 66, 46, 45, 26, 66, 57, 33, 20, 28, 20, 49, 30, 49, 17, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [35][100/400]	Time 3.769 (3.413)	Data 0.000 (0.017)	Loss 9.082 (10.085)	
+Epoch: [35][200/400]	Time 3.246 (3.444)	Data 0.000 (0.020)	Loss 8.593 (10.140)	
+Epoch: [35][300/400]	Time 3.467 (3.443)	Data 0.000 (0.017)	Loss 10.760 (10.311)	
+Epoch: [35][400/400]	Time 3.200 (3.439)	Data 0.000 (0.019)	Loss 11.228 (10.294)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 49, 55, 4, 19, 22, 52, 59, 46, 26, 34, 90, 32, 20, 28, 20, 49, 30, 53, 13, 49, 27, 23, 77, 39, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [36][100/400]	Time 3.258 (3.393)	Data 0.000 (0.019)	Loss 9.705 (10.144)	
+Epoch: [36][200/400]	Time 3.404 (3.424)	Data 0.000 (0.023)	Loss 11.357 (10.103)	
+Epoch: [36][300/400]	Time 3.193 (3.414)	Data 0.000 (0.020)	Loss 10.463 (10.172)	
+Epoch: [36][400/400]	Time 3.354 (3.432)	Data 0.000 (0.020)	Loss 11.130 (10.173)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 47, 52, 58, 26, 35, 33, 88, 20, 28, 20, 49, 30, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [37][100/400]	Time 3.448 (3.398)	Data 0.000 (0.018)	Loss 10.858 (9.967)	
+Epoch: [37][200/400]	Time 3.651 (3.421)	Data 0.000 (0.022)	Loss 9.209 (9.970)	
+Epoch: [37][300/400]	Time 3.531 (3.425)	Data 0.000 (0.019)	Loss 9.724 (9.958)	
+Epoch: [37][400/400]	Time 3.566 (3.434)	Data 0.000 (0.020)	Loss 9.865 (9.911)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 65, 47, 4, 19, 22, 52, 59, 46, 26, 33, 98, 25, 20, 28, 20, 49, 30, 54, 12, 49, 27, 76, 35, 28, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [38][100/400]	Time 3.136 (3.415)	Data 0.000 (0.019)	Loss 9.563 (10.248)	
+Epoch: [38][200/400]	Time 3.475 (3.416)	Data 0.000 (0.022)	Loss 11.730 (10.097)	
+Epoch: [38][300/400]	Time 3.114 (3.402)	Data 0.000 (0.019)	Loss 11.620 (10.019)	
+Epoch: [38][400/400]	Time 3.810 (3.406)	Data 0.000 (0.020)	Loss 10.049 (10.000)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 52, 52, 4, 19, 22, 63, 48, 46, 26, 33, 102, 21, 20, 28, 20, 50, 29, 16, 50, 49, 27, 35, 78, 26, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [39][100/400]	Time 3.382 (3.415)	Data 0.000 (0.017)	Loss 8.743 (10.109)	
+Epoch: [39][200/400]	Time 3.747 (3.423)	Data 0.000 (0.021)	Loss 9.599 (9.951)	
+Epoch: [39][300/400]	Time 3.440 (3.417)	Data 0.000 (0.018)	Loss 10.419 (9.896)	
+Epoch: [39][400/400]	Time 3.884 (3.420)	Data 0.000 (0.019)	Loss 10.288 (9.906)	
+==> Epoch 39 test: 
+Extract Features: [50/1466]	Time 0.457 (0.346)	Data 0.379 (0.270)	
+Extract Features: [100/1466]	Time 0.064 (0.307)	Data 0.000 (0.232)	
+Extract Features: [150/1466]	Time 0.775 (0.295)	Data 0.703 (0.220)	
+Extract Features: [200/1466]	Time 0.071 (0.283)	Data 0.000 (0.208)	
+Extract Features: [250/1466]	Time 0.933 (0.281)	Data 0.839 (0.206)	
+Extract Features: [300/1466]	Time 0.074 (0.276)	Data 0.000 (0.201)	
+Extract Features: [350/1466]	Time 0.726 (0.275)	Data 0.659 (0.200)	
+Extract Features: [400/1466]	Time 0.071 (0.274)	Data 0.000 (0.199)	
+Extract Features: [450/1466]	Time 0.665 (0.273)	Data 0.599 (0.199)	
+Extract Features: [500/1466]	Time 0.071 (0.273)	Data 0.000 (0.198)	
+Extract Features: [550/1466]	Time 0.877 (0.272)	Data 0.806 (0.197)	
+Extract Features: [600/1466]	Time 0.083 (0.271)	Data 0.000 (0.196)	
+Extract Features: [650/1466]	Time 0.992 (0.272)	Data 0.911 (0.197)	
+Extract Features: [700/1466]	Time 0.071 (0.270)	Data 0.000 (0.195)	
+Extract Features: [750/1466]	Time 0.757 (0.271)	Data 0.686 (0.196)	
+Extract Features: [800/1466]	Time 0.070 (0.270)	Data 0.000 (0.195)	
+Extract Features: [850/1466]	Time 0.915 (0.269)	Data 0.841 (0.195)	
+Extract Features: [900/1466]	Time 0.166 (0.269)	Data 0.000 (0.194)	
+Extract Features: [950/1466]	Time 0.227 (0.268)	Data 0.155 (0.193)	
+Extract Features: [1000/1466]	Time 0.070 (0.268)	Data 0.000 (0.193)	
+Extract Features: [1050/1466]	Time 0.069 (0.267)	Data 0.000 (0.193)	
+Extract Features: [1100/1466]	Time 0.808 (0.268)	Data 0.735 (0.193)	
+Extract Features: [1150/1466]	Time 0.072 (0.267)	Data 0.000 (0.192)	
+Extract Features: [1200/1466]	Time 0.889 (0.267)	Data 0.822 (0.192)	
+Extract Features: [1250/1466]	Time 0.070 (0.267)	Data 0.000 (0.192)	
+Extract Features: [1300/1466]	Time 0.725 (0.267)	Data 0.655 (0.192)	
+Extract Features: [1350/1466]	Time 0.069 (0.267)	Data 0.000 (0.192)	
+Extract Features: [1400/1466]	Time 0.890 (0.267)	Data 0.819 (0.192)	
+Extract Features: [1450/1466]	Time 0.762 (0.267)	Data 0.690 (0.192)	
+Mean AP: 24.3%
+CMC Scores:
+  top-1          56.1%
+  top-5          68.8%
+  top-10         73.5%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [48, 56, 66, 4, 19, 22, 50, 61, 46, 26, 35, 90, 31, 20, 28, 20, 49, 30, 50, 16, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [40][100/400]	Time 3.261 (3.444)	Data 0.000 (0.017)	Loss 11.022 (9.978)	
+Epoch: [40][200/400]	Time 3.960 (3.428)	Data 0.000 (0.020)	Loss 9.197 (9.847)	
+Epoch: [40][300/400]	Time 3.792 (3.410)	Data 0.000 (0.017)	Loss 9.028 (9.796)	
+Epoch: [40][400/400]	Time 3.217 (3.414)	Data 0.000 (0.019)	Loss 11.051 (9.790)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 52, 62, 4, 19, 22, 48, 63, 46, 26, 36, 33, 87, 20, 28, 20, 48, 31, 49, 17, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [41][100/400]	Time 3.288 (3.428)	Data 0.000 (0.018)	Loss 8.663 (9.461)	
+Epoch: [41][200/400]	Time 3.232 (3.423)	Data 0.000 (0.020)	Loss 8.481 (9.623)	
+Epoch: [41][300/400]	Time 3.389 (3.428)	Data 0.000 (0.017)	Loss 10.904 (9.717)	
+Epoch: [41][400/400]	Time 3.172 (3.414)	Data 0.000 (0.020)	Loss 9.878 (9.741)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 49, 55, 4, 19, 22, 47, 52, 58, 26, 33, 102, 21, 20, 28, 20, 49, 30, 53, 13, 49, 27, 79, 42, 18, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [42][100/400]	Time 3.291 (3.419)	Data 0.000 (0.016)	Loss 8.598 (9.707)	
+Epoch: [42][200/400]	Time 3.248 (3.408)	Data 0.000 (0.019)	Loss 10.321 (9.688)	
+Epoch: [42][300/400]	Time 3.329 (3.397)	Data 0.000 (0.016)	Loss 9.840 (9.695)	
+Epoch: [42][400/400]	Time 3.429 (3.408)	Data 0.000 (0.018)	Loss 9.085 (9.700)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 48, 64, 45, 26, 64, 59, 33, 20, 28, 20, 47, 32, 52, 14, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [43][100/400]	Time 3.563 (3.433)	Data 0.000 (0.017)	Loss 8.317 (9.609)	
+Epoch: [43][200/400]	Time 3.687 (3.416)	Data 0.000 (0.020)	Loss 10.000 (9.690)	
+Epoch: [43][300/400]	Time 3.208 (3.430)	Data 0.000 (0.017)	Loss 10.080 (9.701)	
+Epoch: [43][400/400]	Time 3.117 (3.437)	Data 0.000 (0.019)	Loss 9.510 (9.725)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 62, 50, 4, 19, 22, 48, 63, 46, 26, 35, 89, 32, 20, 28, 20, 47, 32, 16, 50, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [44][100/400]	Time 3.524 (3.445)	Data 0.000 (0.019)	Loss 8.657 (9.590)	
+Epoch: [44][200/400]	Time 3.433 (3.416)	Data 0.000 (0.021)	Loss 11.547 (9.615)	
+Epoch: [44][300/400]	Time 3.231 (3.417)	Data 0.000 (0.018)	Loss 8.147 (9.635)	
+Epoch: [44][400/400]	Time 3.981 (3.415)	Data 0.000 (0.019)	Loss 10.121 (9.593)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 50, 61, 46, 26, 34, 86, 36, 20, 28, 20, 49, 30, 48, 18, 49, 27, 25, 35, 79, 25, 34]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [45][100/400]	Time 3.170 (3.390)	Data 0.000 (0.018)	Loss 11.310 (9.715)	
+Epoch: [45][200/400]	Time 3.210 (3.377)	Data 0.000 (0.021)	Loss 8.606 (9.719)	
+Epoch: [45][300/400]	Time 2.977 (3.384)	Data 0.000 (0.018)	Loss 7.833 (9.700)	
+Epoch: [45][400/400]	Time 3.164 (3.392)	Data 0.000 (0.019)	Loss 10.284 (9.710)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 53, 51, 4, 19, 22, 50, 61, 46, 26, 34, 90, 32, 20, 28, 20, 49, 30, 54, 12, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [46][100/400]	Time 3.815 (3.424)	Data 0.000 (0.017)	Loss 10.146 (9.625)	
+Epoch: [46][200/400]	Time 3.324 (3.388)	Data 0.000 (0.020)	Loss 8.650 (9.542)	
+Epoch: [46][300/400]	Time 3.166 (3.398)	Data 0.000 (0.018)	Loss 10.738 (9.554)	
+Epoch: [46][400/400]	Time 3.320 (3.399)	Data 0.000 (0.019)	Loss 9.014 (9.608)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [48, 56, 66, 4, 19, 22, 50, 61, 46, 26, 34, 34, 88, 20, 28, 20, 49, 30, 50, 16, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [47][100/400]	Time 3.503 (3.377)	Data 0.000 (0.017)	Loss 10.288 (9.653)	
+Epoch: [47][200/400]	Time 3.916 (3.424)	Data 0.000 (0.020)	Loss 11.126 (9.608)	
+Epoch: [47][300/400]	Time 2.967 (3.421)	Data 0.000 (0.017)	Loss 7.676 (9.562)	
+Epoch: [47][400/400]	Time 3.539 (3.435)	Data 0.000 (0.019)	Loss 10.958 (9.550)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 49, 55, 4, 19, 22, 49, 62, 46, 26, 34, 90, 32, 20, 28, 20, 49, 30, 53, 13, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [48][100/400]	Time 3.467 (3.385)	Data 0.000 (0.017)	Loss 9.252 (9.597)	
+Epoch: [48][200/400]	Time 3.186 (3.416)	Data 0.000 (0.022)	Loss 9.270 (9.517)	
+Epoch: [48][300/400]	Time 3.493 (3.419)	Data 0.000 (0.019)	Loss 10.148 (9.490)	
+Epoch: [48][400/400]	Time 3.324 (3.414)	Data 0.000 (0.021)	Loss 9.125 (9.503)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [48, 56, 66, 4, 19, 22, 52, 59, 46, 26, 62, 37, 57, 20, 28, 20, 49, 30, 35, 31, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [49][100/400]	Time 3.243 (3.439)	Data 0.000 (0.017)	Loss 9.459 (9.435)	
+Epoch: [49][200/400]	Time 3.190 (3.442)	Data 0.000 (0.020)	Loss 10.420 (9.433)	
+Epoch: [49][300/400]	Time 3.914 (3.435)	Data 0.000 (0.017)	Loss 8.389 (9.508)	
+Epoch: [49][400/400]	Time 3.337 (3.428)	Data 0.000 (0.018)	Loss 8.131 (9.531)	
+==> Epoch 49 test: 
+Extract Features: [50/1466]	Time 0.074 (0.096)	Data 0.000 (0.013)	
+Extract Features: [100/1466]	Time 0.071 (0.089)	Data 0.000 (0.007)	
+Extract Features: [150/1466]	Time 0.077 (0.086)	Data 0.000 (0.005)	
+Extract Features: [200/1466]	Time 0.070 (0.086)	Data 0.000 (0.004)	
+Extract Features: [250/1466]	Time 0.075 (0.085)	Data 0.000 (0.003)	
+Extract Features: [300/1466]	Time 0.149 (0.085)	Data 0.000 (0.002)	
+Extract Features: [350/1466]	Time 0.075 (0.084)	Data 0.000 (0.002)	
+Extract Features: [400/1466]	Time 0.087 (0.084)	Data 0.000 (0.002)	
+Extract Features: [450/1466]	Time 0.071 (0.084)	Data 0.000 (0.002)	
+Extract Features: [500/1466]	Time 0.096 (0.084)	Data 0.000 (0.002)	
+Extract Features: [550/1466]	Time 0.082 (0.084)	Data 0.000 (0.001)	
+Extract Features: [600/1466]	Time 0.073 (0.084)	Data 0.000 (0.001)	
+Extract Features: [650/1466]	Time 0.082 (0.084)	Data 0.000 (0.001)	
+Extract Features: [700/1466]	Time 0.090 (0.084)	Data 0.000 (0.001)	
+Extract Features: [750/1466]	Time 0.077 (0.084)	Data 0.000 (0.001)	
+Extract Features: [800/1466]	Time 0.087 (0.083)	Data 0.000 (0.001)	
+Extract Features: [850/1466]	Time 0.070 (0.083)	Data 0.000 (0.001)	
+Extract Features: [900/1466]	Time 0.200 (0.083)	Data 0.000 (0.001)	
+Extract Features: [950/1466]	Time 0.095 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1000/1466]	Time 0.080 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1050/1466]	Time 0.081 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1100/1466]	Time 0.067 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1150/1466]	Time 0.080 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1200/1466]	Time 0.078 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1250/1466]	Time 0.078 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1300/1466]	Time 0.078 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1350/1466]	Time 0.084 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1400/1466]	Time 0.078 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1450/1466]	Time 0.074 (0.083)	Data 0.000 (0.001)	
+Mean AP: 24.6%
+CMC Scores:
+  top-1          56.7%
+  top-5          69.3%
+  top-10         74.1%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 62, 50, 4, 19, 22, 50, 61, 46, 26, 30, 34, 92, 20, 28, 20, 49, 30, 29, 37, 49, 27, 79, 36, 24, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [50][100/400]	Time 3.395 (3.410)	Data 0.000 (0.017)	Loss 11.442 (9.332)	
+Epoch: [50][200/400]	Time 3.850 (3.420)	Data 0.000 (0.019)	Loss 13.503 (9.454)	
+Epoch: [50][300/400]	Time 3.871 (3.416)	Data 0.000 (0.017)	Loss 10.064 (9.537)	
+Epoch: [50][400/400]	Time 3.216 (3.433)	Data 0.000 (0.018)	Loss 8.557 (9.501)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 49, 55, 4, 19, 22, 50, 61, 46, 26, 37, 33, 86, 20, 28, 20, 49, 30, 12, 54, 49, 27, 79, 18, 42, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [51][100/400]	Time 3.306 (3.431)	Data 0.000 (0.018)	Loss 10.263 (9.326)	
+Epoch: [51][200/400]	Time 3.478 (3.422)	Data 0.000 (0.019)	Loss 8.997 (9.473)	
+Epoch: [51][300/400]	Time 3.615 (3.415)	Data 0.000 (0.017)	Loss 10.146 (9.487)	
+Epoch: [51][400/400]	Time 3.228 (3.409)	Data 0.000 (0.018)	Loss 9.479 (9.539)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 52, 52, 4, 19, 22, 48, 45, 64, 26, 34, 90, 32, 20, 28, 20, 49, 30, 16, 50, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [52][100/400]	Time 3.459 (3.477)	Data 0.000 (0.017)	Loss 10.025 (9.520)	
+Epoch: [52][200/400]	Time 3.457 (3.446)	Data 0.000 (0.021)	Loss 9.061 (9.582)	
+Epoch: [52][300/400]	Time 3.486 (3.439)	Data 0.000 (0.018)	Loss 9.151 (9.623)	
+Epoch: [52][400/400]	Time 3.535 (3.437)	Data 0.000 (0.019)	Loss 12.126 (9.633)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 66, 48, 4, 19, 22, 50, 61, 46, 26, 34, 90, 32, 20, 28, 20, 49, 30, 49, 17, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [53][100/400]	Time 3.244 (3.420)	Data 0.000 (0.017)	Loss 10.596 (9.537)	
+Epoch: [53][200/400]	Time 3.071 (3.390)	Data 0.000 (0.021)	Loss 8.256 (9.594)	
+Epoch: [53][300/400]	Time 3.342 (3.404)	Data 0.000 (0.018)	Loss 7.847 (9.483)	
+Epoch: [53][400/400]	Time 3.355 (3.403)	Data 0.000 (0.019)	Loss 9.366 (9.522)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 62, 50, 4, 19, 22, 49, 46, 62, 26, 35, 90, 31, 20, 28, 20, 47, 32, 15, 51, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [54][100/400]	Time 3.162 (3.450)	Data 0.000 (0.020)	Loss 8.770 (9.453)	
+Epoch: [54][200/400]	Time 3.350 (3.453)	Data 0.000 (0.021)	Loss 9.088 (9.446)	
+Epoch: [54][300/400]	Time 3.216 (3.448)	Data 0.000 (0.018)	Loss 8.388 (9.372)	
+Epoch: [54][400/400]	Time 2.981 (3.428)	Data 0.000 (0.019)	Loss 10.023 (9.437)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 48, 64, 45, 26, 74, 33, 49, 20, 28, 20, 49, 30, 16, 50, 49, 27, 79, 22, 38, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [55][100/400]	Time 3.871 (3.452)	Data 0.000 (0.017)	Loss 9.227 (9.550)	
+Epoch: [55][200/400]	Time 3.246 (3.435)	Data 0.000 (0.020)	Loss 9.688 (9.455)	
+Epoch: [55][300/400]	Time 3.195 (3.432)	Data 0.000 (0.018)	Loss 9.772 (9.529)	
+Epoch: [55][400/400]	Time 3.219 (3.439)	Data 0.000 (0.019)	Loss 9.724 (9.550)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [53, 65, 52, 4, 19, 22, 61, 51, 45, 26, 35, 90, 31, 20, 28, 20, 48, 31, 16, 50, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [56][100/400]	Time 3.606 (3.455)	Data 0.000 (0.015)	Loss 10.211 (9.365)	
+Epoch: [56][200/400]	Time 3.627 (3.428)	Data 0.000 (0.019)	Loss 8.749 (9.433)	
+Epoch: [56][300/400]	Time 3.013 (3.435)	Data 0.000 (0.017)	Loss 9.099 (9.472)	
+Epoch: [56][400/400]	Time 3.271 (3.432)	Data 0.000 (0.018)	Loss 8.476 (9.466)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [67, 52, 51, 4, 19, 22, 52, 59, 46, 26, 34, 90, 32, 20, 28, 20, 48, 31, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [57][100/400]	Time 3.307 (3.390)	Data 0.000 (0.018)	Loss 9.965 (9.342)	
+Epoch: [57][200/400]	Time 3.293 (3.399)	Data 0.000 (0.020)	Loss 10.921 (9.367)	
+Epoch: [57][300/400]	Time 3.394 (3.385)	Data 0.000 (0.017)	Loss 9.403 (9.399)	
+Epoch: [57][400/400]	Time 3.507 (3.390)	Data 0.000 (0.018)	Loss 11.938 (9.412)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [55, 66, 49, 4, 19, 22, 61, 50, 46, 26, 34, 90, 32, 20, 28, 20, 50, 29, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [58][100/400]	Time 3.091 (3.404)	Data 0.000 (0.018)	Loss 9.644 (9.358)	
+Epoch: [58][200/400]	Time 3.409 (3.420)	Data 0.000 (0.020)	Loss 9.839 (9.419)	
+Epoch: [58][300/400]	Time 3.797 (3.427)	Data 0.000 (0.017)	Loss 10.773 (9.414)	
+Epoch: [58][400/400]	Time 3.608 (3.434)	Data 0.000 (0.018)	Loss 10.972 (9.404)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [48, 56, 66, 4, 19, 22, 52, 59, 46, 26, 33, 87, 36, 20, 28, 20, 49, 30, 35, 31, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [59][100/400]	Time 3.418 (3.479)	Data 0.000 (0.019)	Loss 9.669 (9.376)	
+Epoch: [59][200/400]	Time 3.768 (3.462)	Data 0.000 (0.022)	Loss 8.710 (9.338)	
+Epoch: [59][300/400]	Time 3.473 (3.466)	Data 0.000 (0.019)	Loss 10.048 (9.342)	
+Epoch: [59][400/400]	Time 3.263 (3.472)	Data 0.000 (0.020)	Loss 9.036 (9.364)	
+==> Epoch 59 test: 
+Extract Features: [50/1466]	Time 0.077 (0.102)	Data 0.000 (0.019)	
+Extract Features: [100/1466]	Time 0.083 (0.091)	Data 0.000 (0.009)	
+Extract Features: [150/1466]	Time 0.073 (0.088)	Data 0.000 (0.006)	
+Extract Features: [200/1466]	Time 0.081 (0.086)	Data 0.000 (0.005)	
+Extract Features: [250/1466]	Time 0.090 (0.086)	Data 0.000 (0.004)	
+Extract Features: [300/1466]	Time 0.071 (0.085)	Data 0.000 (0.003)	
+Extract Features: [350/1466]	Time 0.082 (0.085)	Data 0.000 (0.003)	
+Extract Features: [400/1466]	Time 0.081 (0.085)	Data 0.000 (0.003)	
+Extract Features: [450/1466]	Time 0.087 (0.084)	Data 0.000 (0.002)	
+Extract Features: [500/1466]	Time 0.067 (0.084)	Data 0.000 (0.002)	
+Extract Features: [550/1466]	Time 0.072 (0.084)	Data 0.000 (0.002)	
+Extract Features: [600/1466]	Time 0.072 (0.084)	Data 0.000 (0.002)	
+Extract Features: [650/1466]	Time 0.086 (0.084)	Data 0.000 (0.002)	
+Extract Features: [700/1466]	Time 0.089 (0.084)	Data 0.000 (0.002)	
+Extract Features: [750/1466]	Time 0.089 (0.084)	Data 0.000 (0.001)	
+Extract Features: [800/1466]	Time 0.087 (0.084)	Data 0.000 (0.001)	
+Extract Features: [850/1466]	Time 0.065 (0.083)	Data 0.000 (0.001)	
+Extract Features: [900/1466]	Time 0.073 (0.083)	Data 0.000 (0.001)	
+Extract Features: [950/1466]	Time 0.085 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1000/1466]	Time 0.076 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1050/1466]	Time 0.081 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1100/1466]	Time 0.085 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1150/1466]	Time 0.080 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1200/1466]	Time 0.086 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1250/1466]	Time 0.202 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1300/1466]	Time 0.081 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1350/1466]	Time 0.075 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1400/1466]	Time 0.059 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1450/1466]	Time 0.068 (0.083)	Data 0.000 (0.001)	
+Mean AP: 24.5%
+CMC Scores:
+  top-1          56.8%
+  top-5          68.8%
+  top-10         73.9%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 49, 55, 4, 19, 22, 46, 52, 59, 26, 34, 90, 32, 20, 28, 20, 30, 49, 54, 12, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [60][100/400]	Time 3.446 (3.452)	Data 0.000 (0.016)	Loss 7.828 (9.353)	
+Epoch: [60][200/400]	Time 3.258 (3.464)	Data 0.000 (0.019)	Loss 9.141 (9.453)	
+Epoch: [60][300/400]	Time 3.294 (3.449)	Data 0.000 (0.016)	Loss 9.763 (9.488)	
+Epoch: [60][400/400]	Time 3.476 (3.440)	Data 0.000 (0.018)	Loss 11.761 (9.424)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 64, 50, 4, 19, 22, 50, 61, 46, 26, 30, 34, 92, 20, 28, 20, 48, 31, 16, 50, 49, 27, 79, 22, 38, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [61][100/400]	Time 3.151 (3.433)	Data 0.000 (0.017)	Loss 10.652 (9.334)	
+Epoch: [61][200/400]	Time 3.448 (3.438)	Data 0.000 (0.021)	Loss 9.579 (9.340)	
+Epoch: [61][300/400]	Time 3.240 (3.427)	Data 0.000 (0.018)	Loss 10.036 (9.373)	
+Epoch: [61][400/400]	Time 3.250 (3.431)	Data 0.000 (0.019)	Loss 8.455 (9.368)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 62, 50, 4, 19, 22, 63, 48, 46, 26, 30, 34, 92, 20, 28, 20, 49, 30, 16, 50, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [62][100/400]	Time 3.528 (3.452)	Data 0.000 (0.017)	Loss 7.851 (9.304)	
+Epoch: [62][200/400]	Time 3.395 (3.459)	Data 0.000 (0.019)	Loss 8.539 (9.279)	
+Epoch: [62][300/400]	Time 3.387 (3.474)	Data 0.000 (0.017)	Loss 9.317 (9.286)	
+Epoch: [62][400/400]	Time 3.090 (3.461)	Data 0.000 (0.018)	Loss 9.646 (9.281)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [65, 48, 57, 4, 19, 22, 64, 48, 45, 26, 33, 102, 21, 20, 28, 20, 50, 29, 16, 50, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [63][100/400]	Time 3.413 (3.418)	Data 0.000 (0.017)	Loss 9.619 (9.488)	
+Epoch: [63][200/400]	Time 3.542 (3.432)	Data 0.000 (0.020)	Loss 10.334 (9.453)	
+Epoch: [63][300/400]	Time 3.468 (3.423)	Data 0.000 (0.017)	Loss 8.535 (9.402)	
+Epoch: [63][400/400]	Time 3.326 (3.408)	Data 0.000 (0.018)	Loss 10.132 (9.367)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [67, 52, 51, 4, 19, 22, 52, 59, 46, 26, 33, 23, 100, 20, 28, 20, 30, 49, 52, 14, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [64][100/400]	Time 3.426 (3.442)	Data 0.000 (0.018)	Loss 8.774 (9.301)	
+Epoch: [64][200/400]	Time 3.396 (3.434)	Data 0.000 (0.021)	Loss 10.534 (9.352)	
+Epoch: [64][300/400]	Time 3.397 (3.436)	Data 0.000 (0.018)	Loss 9.842 (9.308)	
+Epoch: [64][400/400]	Time 3.255 (3.441)	Data 0.000 (0.020)	Loss 8.962 (9.311)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 50, 62, 4, 19, 22, 49, 62, 46, 26, 34, 91, 31, 20, 28, 20, 49, 30, 54, 12, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [65][100/400]	Time 3.462 (3.463)	Data 0.000 (0.018)	Loss 9.468 (9.445)	
+Epoch: [65][200/400]	Time 3.487 (3.452)	Data 0.000 (0.022)	Loss 10.268 (9.389)	
+Epoch: [65][300/400]	Time 3.228 (3.429)	Data 0.000 (0.018)	Loss 7.960 (9.393)	
+Epoch: [65][400/400]	Time 3.405 (3.428)	Data 0.000 (0.020)	Loss 8.320 (9.444)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 63, 49, 4, 19, 22, 63, 48, 46, 26, 32, 51, 73, 20, 28, 20, 49, 30, 49, 17, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [66][100/400]	Time 3.372 (3.435)	Data 0.000 (0.017)	Loss 9.890 (9.442)	
+Epoch: [66][200/400]	Time 3.409 (3.431)	Data 0.000 (0.021)	Loss 10.997 (9.418)	
+Epoch: [66][300/400]	Time 3.610 (3.422)	Data 0.000 (0.018)	Loss 10.587 (9.393)	
+Epoch: [66][400/400]	Time 4.031 (3.431)	Data 0.000 (0.019)	Loss 9.917 (9.382)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [55, 66, 49, 4, 19, 22, 50, 61, 46, 26, 33, 103, 20, 20, 28, 20, 30, 49, 53, 13, 49, 27, 79, 38, 22, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [67][100/400]	Time 3.243 (3.427)	Data 0.000 (0.016)	Loss 8.668 (9.396)	
+Epoch: [67][200/400]	Time 3.487 (3.425)	Data 0.000 (0.019)	Loss 8.156 (9.465)	
+Epoch: [67][300/400]	Time 3.207 (3.414)	Data 0.000 (0.018)	Loss 8.733 (9.430)	
+Epoch: [67][400/400]	Time 3.594 (3.418)	Data 0.000 (0.019)	Loss 9.981 (9.442)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 50, 54, 4, 19, 22, 61, 50, 46, 26, 33, 94, 29, 20, 28, 20, 50, 29, 29, 37, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [68][100/400]	Time 3.423 (3.438)	Data 0.000 (0.018)	Loss 9.513 (9.511)	
+Epoch: [68][200/400]	Time 3.612 (3.435)	Data 0.000 (0.020)	Loss 9.658 (9.398)	
+Epoch: [68][300/400]	Time 3.834 (3.444)	Data 0.000 (0.017)	Loss 8.871 (9.364)	
+Epoch: [68][400/400]	Time 3.196 (3.440)	Data 0.000 (0.019)	Loss 9.793 (9.373)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 51, 57, 4, 19, 22, 46, 52, 59, 26, 33, 29, 94, 20, 28, 20, 50, 29, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [69][100/400]	Time 3.576 (3.478)	Data 0.000 (0.016)	Loss 9.606 (9.195)	
+Epoch: [69][200/400]	Time 3.629 (3.478)	Data 0.000 (0.019)	Loss 10.436 (9.211)	
+Epoch: [69][300/400]	Time 3.963 (3.469)	Data 0.000 (0.016)	Loss 9.277 (9.231)	
+Epoch: [69][400/400]	Time 3.520 (3.473)	Data 0.000 (0.018)	Loss 9.686 (9.263)	
+==> Epoch 69 test: 
+Extract Features: [50/1466]	Time 0.070 (0.286)	Data 0.000 (0.209)	
+Extract Features: [100/1466]	Time 0.069 (0.277)	Data 0.000 (0.201)	
+Extract Features: [150/1466]	Time 0.727 (0.276)	Data 0.654 (0.199)	
+Extract Features: [200/1466]	Time 0.081 (0.270)	Data 0.000 (0.194)	
+Extract Features: [250/1466]	Time 0.768 (0.270)	Data 0.694 (0.193)	
+Extract Features: [300/1466]	Time 0.068 (0.242)	Data 0.000 (0.165)	
+Extract Features: [350/1466]	Time 0.066 (0.219)	Data 0.000 (0.142)	
+Extract Features: [400/1466]	Time 0.072 (0.202)	Data 0.000 (0.124)	
+Extract Features: [450/1466]	Time 0.071 (0.189)	Data 0.000 (0.110)	
+Extract Features: [500/1466]	Time 0.168 (0.178)	Data 0.000 (0.099)	
+Extract Features: [550/1466]	Time 0.076 (0.170)	Data 0.000 (0.090)	
+Extract Features: [600/1466]	Time 0.073 (0.163)	Data 0.000 (0.083)	
+Extract Features: [650/1466]	Time 0.075 (0.156)	Data 0.000 (0.076)	
+Extract Features: [700/1466]	Time 0.093 (0.151)	Data 0.000 (0.071)	
+Extract Features: [750/1466]	Time 0.081 (0.147)	Data 0.000 (0.066)	
+Extract Features: [800/1466]	Time 0.086 (0.143)	Data 0.000 (0.062)	
+Extract Features: [850/1466]	Time 0.068 (0.139)	Data 0.000 (0.058)	
+Extract Features: [900/1466]	Time 0.070 (0.136)	Data 0.004 (0.055)	
+Extract Features: [950/1466]	Time 0.071 (0.133)	Data 0.000 (0.052)	
+Extract Features: [1000/1466]	Time 0.180 (0.131)	Data 0.000 (0.050)	
+Extract Features: [1050/1466]	Time 0.190 (0.128)	Data 0.000 (0.047)	
+Extract Features: [1100/1466]	Time 0.099 (0.126)	Data 0.000 (0.045)	
+Extract Features: [1150/1466]	Time 0.086 (0.124)	Data 0.000 (0.043)	
+Extract Features: [1200/1466]	Time 0.072 (0.122)	Data 0.000 (0.041)	
+Extract Features: [1250/1466]	Time 0.081 (0.121)	Data 0.000 (0.040)	
+Extract Features: [1300/1466]	Time 0.078 (0.119)	Data 0.000 (0.038)	
+Extract Features: [1350/1466]	Time 0.079 (0.118)	Data 0.000 (0.037)	
+Extract Features: [1400/1466]	Time 0.074 (0.117)	Data 0.000 (0.036)	
+Extract Features: [1450/1466]	Time 0.085 (0.115)	Data 0.000 (0.034)	
+Mean AP: 24.6%
+CMC Scores:
+  top-1          56.7%
+  top-5          69.1%
+  top-10         74.1%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 52, 56, 4, 19, 22, 52, 59, 46, 26, 33, 30, 93, 20, 28, 20, 49, 30, 15, 51, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [70][100/400]	Time 3.269 (3.444)	Data 0.000 (0.017)	Loss 8.292 (9.386)	
+Epoch: [70][200/400]	Time 3.326 (3.448)	Data 0.000 (0.021)	Loss 10.684 (9.324)	
+Epoch: [70][300/400]	Time 3.652 (3.445)	Data 0.000 (0.018)	Loss 10.005 (9.321)	
+Epoch: [70][400/400]	Time 3.738 (3.454)	Data 0.000 (0.019)	Loss 9.895 (9.315)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 66, 48, 4, 19, 22, 52, 59, 46, 26, 33, 92, 31, 20, 28, 20, 30, 49, 50, 16, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [71][100/400]	Time 3.331 (3.441)	Data 0.000 (0.016)	Loss 8.812 (9.298)	
+Epoch: [71][200/400]	Time 3.496 (3.455)	Data 0.000 (0.020)	Loss 8.192 (9.302)	
+Epoch: [71][300/400]	Time 3.941 (3.435)	Data 0.000 (0.017)	Loss 7.656 (9.316)	
+Epoch: [71][400/400]	Time 3.182 (3.424)	Data 0.000 (0.019)	Loss 8.520 (9.343)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 66, 48, 4, 19, 22, 48, 45, 64, 26, 31, 97, 28, 20, 28, 20, 49, 30, 16, 50, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [72][100/400]	Time 4.005 (3.447)	Data 0.000 (0.018)	Loss 9.147 (9.498)	
+Epoch: [72][200/400]	Time 3.202 (3.469)	Data 0.000 (0.020)	Loss 9.670 (9.496)	
+Epoch: [72][300/400]	Time 3.227 (3.462)	Data 0.000 (0.017)	Loss 10.066 (9.413)	
+Epoch: [72][400/400]	Time 3.144 (3.463)	Data 0.000 (0.019)	Loss 7.559 (9.423)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 50, 61, 46, 26, 35, 90, 31, 20, 28, 20, 48, 31, 16, 50, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [73][100/400]	Time 3.297 (3.505)	Data 0.000 (0.018)	Loss 9.930 (9.247)	
+Epoch: [73][200/400]	Time 3.839 (3.472)	Data 0.000 (0.021)	Loss 8.111 (9.296)	
+Epoch: [73][300/400]	Time 3.385 (3.473)	Data 0.000 (0.019)	Loss 10.824 (9.317)	
+Epoch: [73][400/400]	Time 3.630 (3.474)	Data 0.000 (0.020)	Loss 11.508 (9.291)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 50, 54, 4, 19, 22, 52, 59, 46, 26, 31, 100, 25, 20, 28, 20, 30, 49, 54, 12, 49, 27, 25, 37, 77, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [74][100/400]	Time 3.768 (3.427)	Data 0.000 (0.019)	Loss 9.490 (9.387)	
+Epoch: [74][200/400]	Time 3.222 (3.444)	Data 0.000 (0.021)	Loss 8.690 (9.453)	
+Epoch: [74][300/400]	Time 3.269 (3.442)	Data 0.000 (0.018)	Loss 8.974 (9.427)	
+Epoch: [74][400/400]	Time 3.420 (3.453)	Data 0.000 (0.020)	Loss 11.306 (9.435)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [57, 66, 47, 4, 19, 22, 46, 52, 59, 26, 33, 93, 30, 20, 28, 20, 30, 49, 50, 16, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [75][100/400]	Time 3.336 (3.473)	Data 0.000 (0.018)	Loss 11.516 (9.430)	
+Epoch: [75][200/400]	Time 3.735 (3.476)	Data 0.000 (0.021)	Loss 8.640 (9.314)	
+Epoch: [75][300/400]	Time 3.299 (3.462)	Data 0.000 (0.018)	Loss 7.027 (9.286)	
+Epoch: [75][400/400]	Time 3.504 (3.457)	Data 0.000 (0.019)	Loss 9.771 (9.277)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 52, 52, 4, 19, 22, 48, 64, 45, 26, 31, 100, 25, 20, 28, 20, 50, 29, 54, 12, 49, 27, 35, 78, 26, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [76][100/400]	Time 2.966 (3.449)	Data 0.000 (0.018)	Loss 7.638 (9.423)	
+Epoch: [76][200/400]	Time 3.322 (3.422)	Data 0.000 (0.021)	Loss 11.198 (9.425)	
+Epoch: [76][300/400]	Time 3.378 (3.426)	Data 0.000 (0.018)	Loss 9.260 (9.481)	
+Epoch: [76][400/400]	Time 3.485 (3.428)	Data 0.000 (0.019)	Loss 9.741 (9.462)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 50, 62, 4, 19, 22, 48, 46, 63, 26, 32, 101, 23, 20, 28, 20, 30, 49, 16, 50, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [77][100/400]	Time 3.206 (3.406)	Data 0.000 (0.018)	Loss 11.279 (9.459)	
+Epoch: [77][200/400]	Time 3.859 (3.430)	Data 0.000 (0.020)	Loss 9.238 (9.410)	
+Epoch: [77][300/400]	Time 3.996 (3.427)	Data 0.000 (0.018)	Loss 9.711 (9.392)	
+Epoch: [77][400/400]	Time 3.191 (3.454)	Data 0.000 (0.020)	Loss 8.097 (9.412)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 49, 55, 4, 19, 22, 52, 59, 46, 26, 34, 90, 32, 20, 28, 20, 49, 30, 12, 54, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [78][100/400]	Time 3.369 (3.464)	Data 0.000 (0.019)	Loss 9.837 (9.540)	
+Epoch: [78][200/400]	Time 3.476 (3.445)	Data 0.000 (0.021)	Loss 7.791 (9.483)	
+Epoch: [78][300/400]	Time 3.224 (3.450)	Data 0.000 (0.019)	Loss 10.315 (9.465)	
+Epoch: [78][400/400]	Time 3.272 (3.452)	Data 0.000 (0.020)	Loss 7.993 (9.440)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 65, 47, 4, 19, 22, 52, 59, 46, 26, 34, 90, 32, 20, 28, 20, 50, 29, 54, 12, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [79][100/400]	Time 3.290 (3.370)	Data 0.000 (0.017)	Loss 11.542 (9.449)	
+Epoch: [79][200/400]	Time 3.329 (3.394)	Data 0.000 (0.021)	Loss 9.814 (9.427)	
+Epoch: [79][300/400]	Time 3.260 (3.406)	Data 0.000 (0.018)	Loss 8.223 (9.402)	
+Epoch: [79][400/400]	Time 3.293 (3.415)	Data 0.000 (0.020)	Loss 15.549 (9.394)	
+==> Epoch 79 test: 
+Extract Features: [50/1466]	Time 0.068 (0.097)	Data 0.000 (0.014)	
+Extract Features: [100/1466]	Time 0.083 (0.090)	Data 0.000 (0.007)	
+Extract Features: [150/1466]	Time 0.090 (0.088)	Data 0.000 (0.005)	
+Extract Features: [200/1466]	Time 0.092 (0.087)	Data 0.001 (0.004)	
+Extract Features: [250/1466]	Time 0.083 (0.087)	Data 0.000 (0.003)	
+Extract Features: [300/1466]	Time 0.067 (0.086)	Data 0.000 (0.003)	
+Extract Features: [350/1466]	Time 0.081 (0.086)	Data 0.000 (0.002)	
+Extract Features: [400/1466]	Time 0.085 (0.085)	Data 0.000 (0.002)	
+Extract Features: [450/1466]	Time 0.071 (0.085)	Data 0.000 (0.002)	
+Extract Features: [500/1466]	Time 0.078 (0.085)	Data 0.000 (0.002)	
+Extract Features: [550/1466]	Time 0.081 (0.085)	Data 0.000 (0.002)	
+Extract Features: [600/1466]	Time 0.069 (0.085)	Data 0.000 (0.001)	
+Extract Features: [650/1466]	Time 0.079 (0.085)	Data 0.000 (0.001)	
+Extract Features: [700/1466]	Time 0.081 (0.084)	Data 0.000 (0.001)	
+Extract Features: [750/1466]	Time 0.348 (0.095)	Data 0.277 (0.012)	
+Extract Features: [800/1466]	Time 0.068 (0.105)	Data 0.000 (0.023)	
+Extract Features: [850/1466]	Time 0.070 (0.114)	Data 0.000 (0.032)	
+Extract Features: [900/1466]	Time 0.068 (0.123)	Data 0.000 (0.041)	
+Extract Features: [950/1466]	Time 0.066 (0.129)	Data 0.000 (0.048)	
+Extract Features: [1000/1466]	Time 0.071 (0.136)	Data 0.000 (0.055)	
+Extract Features: [1050/1466]	Time 0.088 (0.134)	Data 0.000 (0.054)	
+Extract Features: [1100/1466]	Time 0.067 (0.132)	Data 0.000 (0.051)	
+Extract Features: [1150/1466]	Time 0.066 (0.130)	Data 0.000 (0.049)	
+Extract Features: [1200/1466]	Time 0.071 (0.128)	Data 0.000 (0.047)	
+Extract Features: [1250/1466]	Time 0.084 (0.126)	Data 0.000 (0.045)	
+Extract Features: [1300/1466]	Time 0.088 (0.124)	Data 0.000 (0.043)	
+Extract Features: [1350/1466]	Time 0.075 (0.123)	Data 0.000 (0.042)	
+Extract Features: [1400/1466]	Time 0.077 (0.121)	Data 0.000 (0.040)	
+Extract Features: [1450/1466]	Time 0.090 (0.120)	Data 0.000 (0.039)	
+Mean AP: 24.5%
+CMC Scores:
+  top-1          56.6%
+  top-5          69.0%
+  top-10         73.9%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 66, 48, 4, 19, 22, 64, 48, 45, 26, 33, 93, 30, 20, 28, 20, 49, 30, 50, 16, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [80][100/400]	Time 3.773 (3.457)	Data 0.000 (0.017)	Loss 8.664 (9.653)	
+Epoch: [80][200/400]	Time 3.380 (3.464)	Data 0.000 (0.020)	Loss 8.351 (9.498)	
+Epoch: [80][300/400]	Time 3.144 (3.442)	Data 0.000 (0.017)	Loss 9.684 (9.433)	
+Epoch: [80][400/400]	Time 3.345 (3.438)	Data 0.000 (0.019)	Loss 8.573 (9.408)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [65, 56, 49, 4, 19, 22, 49, 46, 62, 26, 64, 35, 57, 20, 28, 20, 49, 30, 21, 45, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [81][100/400]	Time 3.195 (3.433)	Data 0.001 (0.018)	Loss 9.177 (9.379)	
+Epoch: [81][200/400]	Time 3.723 (3.411)	Data 0.000 (0.022)	Loss 7.925 (9.459)	
+Epoch: [81][300/400]	Time 3.423 (3.429)	Data 0.000 (0.018)	Loss 9.001 (9.448)	
+Epoch: [81][400/400]	Time 3.592 (3.436)	Data 0.001 (0.019)	Loss 8.185 (9.446)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 50, 62, 4, 19, 22, 50, 61, 46, 26, 35, 89, 32, 20, 28, 20, 30, 49, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [82][100/400]	Time 3.263 (3.458)	Data 0.000 (0.018)	Loss 8.503 (9.438)	
+Epoch: [82][200/400]	Time 3.627 (3.458)	Data 0.000 (0.021)	Loss 10.656 (9.318)	
+Epoch: [82][300/400]	Time 3.184 (3.450)	Data 0.000 (0.018)	Loss 9.470 (9.346)	
+Epoch: [82][400/400]	Time 3.242 (3.448)	Data 0.000 (0.019)	Loss 9.162 (9.321)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 51, 57, 4, 19, 22, 48, 45, 64, 26, 34, 90, 32, 20, 28, 20, 49, 30, 50, 16, 49, 27, 79, 22, 38, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [83][100/400]	Time 3.770 (3.448)	Data 0.000 (0.016)	Loss 10.527 (9.400)	
+Epoch: [83][200/400]	Time 3.311 (3.437)	Data 0.000 (0.020)	Loss 8.907 (9.377)	
+Epoch: [83][300/400]	Time 3.431 (3.455)	Data 0.000 (0.017)	Loss 9.841 (9.373)	
+Epoch: [83][400/400]	Time 3.955 (3.458)	Data 0.000 (0.018)	Loss 8.551 (9.381)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 48, 60, 4, 19, 22, 52, 59, 46, 26, 33, 93, 30, 20, 28, 20, 49, 30, 53, 13, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [84][100/400]	Time 3.431 (3.432)	Data 0.000 (0.018)	Loss 10.853 (9.184)	
+Epoch: [84][200/400]	Time 3.411 (3.447)	Data 0.000 (0.020)	Loss 11.274 (9.315)	
+Epoch: [84][300/400]	Time 3.523 (3.438)	Data 0.000 (0.018)	Loss 8.555 (9.341)	
+Epoch: [84][400/400]	Time 3.393 (3.431)	Data 0.000 (0.020)	Loss 8.119 (9.368)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [68, 49, 53, 4, 19, 22, 47, 58, 52, 26, 31, 100, 25, 20, 28, 20, 49, 30, 54, 12, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [85][100/400]	Time 3.201 (3.430)	Data 0.000 (0.017)	Loss 9.607 (9.407)	
+Epoch: [85][200/400]	Time 3.361 (3.425)	Data 0.000 (0.020)	Loss 9.460 (9.352)	
+Epoch: [85][300/400]	Time 3.233 (3.431)	Data 0.000 (0.017)	Loss 9.186 (9.385)	
+Epoch: [85][400/400]	Time 3.463 (3.436)	Data 0.000 (0.019)	Loss 7.566 (9.342)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 66, 48, 4, 19, 22, 50, 61, 46, 26, 34, 91, 31, 20, 28, 20, 49, 30, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [86][100/400]	Time 3.185 (3.438)	Data 0.000 (0.017)	Loss 9.443 (9.310)	
+Epoch: [86][200/400]	Time 3.591 (3.451)	Data 0.001 (0.020)	Loss 8.611 (9.321)	
+Epoch: [86][300/400]	Time 3.809 (3.445)	Data 0.000 (0.017)	Loss 8.969 (9.265)	
+Epoch: [86][400/400]	Time 3.427 (3.441)	Data 0.000 (0.019)	Loss 10.186 (9.281)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [57, 64, 49, 4, 19, 22, 62, 49, 46, 26, 33, 92, 31, 20, 28, 20, 49, 30, 49, 17, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [87][100/400]	Time 3.622 (3.456)	Data 0.000 (0.017)	Loss 9.974 (9.254)	
+Epoch: [87][200/400]	Time 3.374 (3.433)	Data 0.000 (0.019)	Loss 9.759 (9.356)	
+Epoch: [87][300/400]	Time 3.404 (3.430)	Data 0.000 (0.017)	Loss 7.476 (9.372)	
+Epoch: [87][400/400]	Time 3.255 (3.427)	Data 0.000 (0.019)	Loss 10.783 (9.374)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 51, 57, 4, 19, 22, 49, 46, 62, 26, 33, 29, 94, 20, 28, 20, 50, 29, 52, 14, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [88][100/400]	Time 3.576 (3.409)	Data 0.000 (0.017)	Loss 10.457 (9.474)	
+Epoch: [88][200/400]	Time 3.659 (3.414)	Data 0.000 (0.020)	Loss 9.566 (9.322)	
+Epoch: [88][300/400]	Time 3.146 (3.417)	Data 0.000 (0.018)	Loss 11.282 (9.361)	
+Epoch: [88][400/400]	Time 3.663 (3.438)	Data 0.000 (0.019)	Loss 9.484 (9.369)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 52, 59, 46, 26, 62, 37, 57, 20, 28, 20, 49, 30, 35, 31, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [89][100/400]	Time 3.059 (3.427)	Data 0.000 (0.016)	Loss 9.733 (9.518)	
+Epoch: [89][200/400]	Time 3.255 (3.445)	Data 0.000 (0.019)	Loss 8.766 (9.429)	
+Epoch: [89][300/400]	Time 3.600 (3.441)	Data 0.000 (0.017)	Loss 7.881 (9.433)	
+Epoch: [89][400/400]	Time 3.233 (3.436)	Data 0.000 (0.018)	Loss 9.076 (9.408)	
+==> Epoch 89 test: 
+Extract Features: [50/1466]	Time 0.080 (0.101)	Data 0.000 (0.020)	
+Extract Features: [100/1466]	Time 0.136 (0.090)	Data 0.000 (0.010)	
+Extract Features: [150/1466]	Time 0.133 (0.087)	Data 0.000 (0.007)	
+Extract Features: [200/1466]	Time 0.073 (0.086)	Data 0.000 (0.005)	
+Extract Features: [250/1466]	Time 0.077 (0.085)	Data 0.000 (0.004)	
+Extract Features: [300/1466]	Time 0.076 (0.085)	Data 0.000 (0.004)	
+Extract Features: [350/1466]	Time 0.088 (0.085)	Data 0.000 (0.004)	
+Extract Features: [400/1466]	Time 0.085 (0.085)	Data 0.000 (0.003)	
+Extract Features: [450/1466]	Time 0.082 (0.084)	Data 0.000 (0.003)	
+Extract Features: [500/1466]	Time 0.071 (0.085)	Data 0.000 (0.003)	
+Extract Features: [550/1466]	Time 0.077 (0.084)	Data 0.000 (0.002)	
+Extract Features: [600/1466]	Time 0.080 (0.084)	Data 0.000 (0.002)	
+Extract Features: [650/1466]	Time 0.073 (0.085)	Data 0.000 (0.002)	
+Extract Features: [700/1466]	Time 0.083 (0.084)	Data 0.000 (0.002)	
+Extract Features: [750/1466]	Time 0.063 (0.084)	Data 0.000 (0.002)	
+Extract Features: [800/1466]	Time 0.090 (0.084)	Data 0.000 (0.002)	
+Extract Features: [850/1466]	Time 0.062 (0.084)	Data 0.000 (0.002)	
+Extract Features: [900/1466]	Time 0.069 (0.084)	Data 0.000 (0.002)	
+Extract Features: [950/1466]	Time 0.069 (0.083)	Data 0.000 (0.002)	
+Extract Features: [1000/1466]	Time 0.072 (0.084)	Data 0.000 (0.001)	
+Extract Features: [1050/1466]	Time 0.077 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1100/1466]	Time 0.066 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1150/1466]	Time 0.065 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1200/1466]	Time 0.085 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1250/1466]	Time 0.078 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1300/1466]	Time 0.076 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1350/1466]	Time 0.070 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1400/1466]	Time 0.068 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1450/1466]	Time 0.455 (0.088)	Data 0.384 (0.007)	
+Mean AP: 24.4%
+CMC Scores:
+  top-1          56.6%
+  top-5          68.9%
+  top-10         73.8%
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [56, 66, 48, 4, 19, 22, 63, 48, 46, 26, 33, 28, 95, 20, 28, 20, 50, 29, 16, 50, 49, 27, 79, 19, 41, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [90][100/400]	Time 3.381 (3.449)	Data 0.000 (0.020)	Loss 8.250 (9.154)	
+Epoch: [90][200/400]	Time 3.309 (3.453)	Data 0.000 (0.022)	Loss 8.747 (9.257)	
+Epoch: [90][300/400]	Time 3.886 (3.443)	Data 0.000 (0.018)	Loss 8.869 (9.241)	
+Epoch: [90][400/400]	Time 3.276 (3.437)	Data 0.000 (0.020)	Loss 9.239 (9.284)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 64, 48, 4, 19, 22, 50, 61, 46, 26, 30, 34, 92, 20, 28, 20, 30, 49, 52, 14, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [91][100/400]	Time 3.882 (3.450)	Data 0.000 (0.017)	Loss 10.227 (9.533)	
+Epoch: [91][200/400]	Time 3.665 (3.418)	Data 0.000 (0.020)	Loss 10.394 (9.396)	
+Epoch: [91][300/400]	Time 3.209 (3.429)	Data 0.000 (0.017)	Loss 9.923 (9.404)	
+Epoch: [91][400/400]	Time 3.903 (3.433)	Data 0.000 (0.019)	Loss 8.545 (9.330)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [47, 64, 59, 4, 19, 22, 51, 60, 46, 26, 33, 92, 31, 20, 28, 20, 49, 30, 16, 50, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [92][100/400]	Time 3.492 (3.482)	Data 0.000 (0.016)	Loss 11.536 (9.306)	
+Epoch: [92][200/400]	Time 3.511 (3.452)	Data 0.000 (0.019)	Loss 8.442 (9.272)	
+Epoch: [92][300/400]	Time 3.561 (3.450)	Data 0.000 (0.017)	Loss 9.218 (9.239)	
+Epoch: [92][400/400]	Time 3.379 (3.449)	Data 0.000 (0.019)	Loss 10.812 (9.285)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [66, 49, 55, 4, 19, 22, 48, 63, 46, 26, 34, 90, 32, 20, 28, 20, 30, 49, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [93][100/400]	Time 3.419 (3.467)	Data 0.000 (0.020)	Loss 9.224 (9.333)	
+Epoch: [93][200/400]	Time 3.161 (3.463)	Data 0.000 (0.022)	Loss 9.237 (9.373)	
+Epoch: [93][300/400]	Time 3.217 (3.442)	Data 0.000 (0.018)	Loss 8.687 (9.377)	
+Epoch: [93][400/400]	Time 3.445 (3.446)	Data 0.000 (0.019)	Loss 13.828 (9.421)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 52, 56, 4, 19, 22, 52, 59, 46, 26, 34, 90, 32, 20, 28, 20, 49, 30, 50, 16, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [94][100/400]	Time 3.314 (3.464)	Data 0.000 (0.018)	Loss 7.549 (9.292)	
+Epoch: [94][200/400]	Time 3.250 (3.450)	Data 0.000 (0.020)	Loss 10.675 (9.289)	
+Epoch: [94][300/400]	Time 3.268 (3.437)	Data 0.000 (0.018)	Loss 10.052 (9.381)	
+Epoch: [94][400/400]	Time 3.405 (3.445)	Data 0.000 (0.019)	Loss 10.950 (9.403)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 65, 47, 4, 19, 22, 52, 59, 46, 26, 33, 90, 33, 20, 28, 20, 30, 49, 26, 40, 49, 27, 17, 76, 46, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [95][100/400]	Time 3.253 (3.452)	Data 0.000 (0.016)	Loss 8.566 (9.372)	
+Epoch: [95][200/400]	Time 3.733 (3.489)	Data 0.000 (0.020)	Loss 10.488 (9.372)	
+Epoch: [95][300/400]	Time 3.462 (3.474)	Data 0.000 (0.018)	Loss 9.342 (9.364)	
+Epoch: [95][400/400]	Time 3.684 (3.476)	Data 0.000 (0.019)	Loss 11.272 (9.346)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 65, 46, 4, 19, 22, 61, 50, 46, 26, 33, 93, 30, 20, 28, 20, 49, 30, 35, 31, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [96][100/400]	Time 3.463 (3.448)	Data 0.000 (0.020)	Loss 8.236 (9.352)	
+Epoch: [96][200/400]	Time 3.212 (3.451)	Data 0.000 (0.022)	Loss 8.160 (9.288)	
+Epoch: [96][300/400]	Time 3.627 (3.454)	Data 0.000 (0.019)	Loss 9.991 (9.364)	
+Epoch: [96][400/400]	Time 3.213 (3.436)	Data 0.000 (0.020)	Loss 8.331 (9.406)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [58, 62, 50, 4, 19, 22, 51, 60, 46, 26, 71, 35, 50, 20, 28, 20, 49, 30, 27, 39, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [97][100/400]	Time 3.279 (3.447)	Data 0.000 (0.016)	Loss 8.847 (9.236)	
+Epoch: [97][200/400]	Time 3.358 (3.433)	Data 0.000 (0.021)	Loss 8.304 (9.227)	
+Epoch: [97][300/400]	Time 3.204 (3.428)	Data 0.000 (0.018)	Loss 8.633 (9.326)	
+Epoch: [97][400/400]	Time 3.279 (3.446)	Data 0.000 (0.019)	Loss 9.991 (9.366)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [59, 49, 62, 4, 19, 22, 49, 62, 46, 26, 34, 90, 32, 20, 28, 20, 50, 29, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [98][100/400]	Time 3.605 (3.427)	Data 0.000 (0.015)	Loss 9.587 (9.473)	
+Epoch: [98][200/400]	Time 3.786 (3.445)	Data 0.000 (0.019)	Loss 10.853 (9.533)	
+Epoch: [98][300/400]	Time 3.710 (3.441)	Data 0.000 (0.017)	Loss 9.391 (9.430)	
+Epoch: [98][400/400]	Time 3.240 (3.452)	Data 0.000 (0.019)	Loss 11.548 (9.425)	
+==> Extract feature for all images
+==> Computing class centers
+  ID number under each sub-camera=  [62, 50, 58, 4, 19, 22, 50, 61, 46, 26, 33, 101, 22, 20, 28, 20, 49, 30, 53, 13, 49, 27, 23, 37, 79, 34, 25]
+  generating sub-camera label with 27 sub-cameras from 0.0 to 26.0
+Epoch: [99][100/400]	Time 3.453 (3.473)	Data 0.000 (0.017)	Loss 8.991 (9.461)	
+Epoch: [99][200/400]	Time 3.408 (3.460)	Data 0.000 (0.021)	Loss 9.299 (9.370)	
+Epoch: [99][300/400]	Time 3.050 (3.453)	Data 0.000 (0.018)	Loss 10.107 (9.412)	
+Epoch: [99][400/400]	Time 3.376 (3.453)	Data 0.000 (0.019)	Loss 8.615 (9.371)	
+==> Epoch 99 test: 
+Extract Features: [50/1466]	Time 0.090 (0.101)	Data 0.000 (0.014)	
+Extract Features: [100/1466]	Time 0.092 (0.093)	Data 0.000 (0.007)	
+Extract Features: [150/1466]	Time 0.079 (0.088)	Data 0.000 (0.005)	
+Extract Features: [200/1466]	Time 0.080 (0.087)	Data 0.000 (0.004)	
+Extract Features: [250/1466]	Time 0.154 (0.085)	Data 0.000 (0.003)	
+Extract Features: [300/1466]	Time 0.080 (0.084)	Data 0.000 (0.003)	
+Extract Features: [350/1466]	Time 0.078 (0.085)	Data 0.000 (0.002)	
+Extract Features: [400/1466]	Time 0.076 (0.084)	Data 0.000 (0.002)	
+Extract Features: [450/1466]	Time 0.080 (0.084)	Data 0.000 (0.002)	
+Extract Features: [500/1466]	Time 0.140 (0.084)	Data 0.000 (0.002)	
+Extract Features: [550/1466]	Time 0.074 (0.084)	Data 0.000 (0.001)	
+Extract Features: [600/1466]	Time 0.067 (0.084)	Data 0.000 (0.001)	
+Extract Features: [650/1466]	Time 0.094 (0.084)	Data 0.000 (0.001)	
+Extract Features: [700/1466]	Time 0.075 (0.084)	Data 0.000 (0.001)	
+Extract Features: [750/1466]	Time 0.068 (0.084)	Data 0.000 (0.001)	
+Extract Features: [800/1466]	Time 0.085 (0.083)	Data 0.000 (0.001)	
+Extract Features: [850/1466]	Time 0.077 (0.083)	Data 0.000 (0.001)	
+Extract Features: [900/1466]	Time 0.075 (0.083)	Data 0.000 (0.001)	
+Extract Features: [950/1466]	Time 0.086 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1000/1466]	Time 0.079 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1050/1466]	Time 0.079 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1100/1466]	Time 0.087 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1150/1466]	Time 0.076 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1200/1466]	Time 0.079 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1250/1466]	Time 0.074 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1300/1466]	Time 0.070 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1350/1466]	Time 0.093 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1400/1466]	Time 0.096 (0.083)	Data 0.000 (0.001)	
+Extract Features: [1450/1466]	Time 0.093 (0.083)	Data 0.000 (0.001)	
+Mean AP: 24.5%
+CMC Scores:
+  top-1          56.5%
+  top-5          68.9%
+  top-10         73.9%
+Total running time:  2 days, 4:14:20.597982
