@@ -26,15 +26,22 @@ Download the re-ID datasets Market-1501, MSMT17. Then put them under a folder su
 
 We utilize 4 GPUs for training. Performance reported in the paper can be obtained by running the following commands:
 
-Train with Market-1501 using ResNet-Nonlocal backbone or ViT-S backbone:
+Train on Market-1501 using ResNet-Nonlocal backbone (default):
 ```shell
 bash train_market.sh 
+```
+Train on Market-1501 using ViT-S backbone:
+```shell
 bash train_market_vit.sh 
 ```
 
-Train with MSMT17 using ResNet-Nonlocal backbone or ViT-S backbone:
+Train on MSMT17 using ResNet-Nonlocal backbone (default):
 ```shell
 bash train_msmt.sh 
+```
+
+Train on MSMT17 using ViT-S backbone:
+```shell
 bash train_msmt_vit.sh 
 ```
 
@@ -42,7 +49,7 @@ bash train_msmt_vit.sh
 <img src="figs/result.png" style="zoom:45%;" />
 
 ## Citation
-If you find this code useful for your research, please cite our paper
+If you find this code useful for your research, please kindly cite our paper:
 ```
 @article{2023_wang_iici,
     title={Learning Intra and Inter-Camera Invariance for Isolated Camera supervised Person Re-Identification},
